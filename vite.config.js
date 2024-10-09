@@ -16,4 +16,5 @@ export default defineConfig({
     emptyOutDir: true,
   },
   root: "src",
+  base: "/Anahiem-Halloween-Parade-Map/",
 });
