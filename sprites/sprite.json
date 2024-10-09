@@ -1,0 +1,23 @@
+{
+  "festival": {
+    "height": 84,
+    "pixelRatio": 1,
+    "width": 191,
+    "x": 0,
+    "y": 88
+  },
+  "parade": {
+    "height": 88,
+    "pixelRatio": 1,
+    "width": 212,
+    "x": 0,
+    "y": 0
+  },
+  "parking": {
+    "height": 35,
+    "pixelRatio": 1,
+    "width": 41,
+    "x": 191,
+    "y": 88
+  }
+}
