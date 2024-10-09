@@ -4,131 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#00fff4",
-        "stroke-width": 5,
-        "stroke-opacity": 0.5,
-        "fill-opacity": 0.1,
-        "kind": "map-max-bounds",
-        "fill": "#00fff4"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ],
-            [
-              -117.94166283493314,
-              33.847150653168
-            ],
-            [
-              -117.94173386667563,
-              33.8336010802066
-            ],
-            [
-              -117.94159180319089,
-              33.81801483485654
-            ],
-            [
-              -117.89390591570934,
-              33.818044333177426
-            ],
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": 0
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#77cafb",
-        "stroke-width": 5,
-        "stroke-opacity": 1,
-        "fill": "#8ac6f5",
-        "fill-opacity": 0.1,
-        "kind": "parade-initial-bounds"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ],
-            [
-              -117.90788926682217,
-              33.84170032610531
-            ],
-            [
-              -117.93583791742341,
-              33.83495209689048
-            ],
-            [
-              -117.93166102064399,
-              33.82378091721784
-            ],
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": 18
-    },
-    {
-      "id": 2,
-      "type": "Feature",
-      "properties": {
-        "stroke": "#6462f5",
-        "stroke-width": 5,
-        "stroke-opacity": 1,
-        "fill-opacity": 0.1,
-        "kind": "festival-initial-bounds",
-        "fill": "#615fe7"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.9128024,
-              33.8332716
-            ],
-            [
-              -117.913379,
-              33.8351751
-            ],
-            [
-              -117.9134287,
-              33.8353774
-            ],
-            [
-              -117.9184939,
-              33.8341428
-            ],
-            [
-              -117.9179471,
-              33.832132
-            ],
-            [
-              -117.9128024,
-              33.8332716
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "kind": "festival-outline",
         "stroke": "#ff1dea",
         "stroke-width": 3,
@@ -241,7 +116,318 @@
       }
     },
     {
-      "id": "halloween-tree",
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#74fb4c",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "food",
+        "label": "Food Trucks"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91714423451714,
+            33.83350537091667
+          ],
+          [
+            -117.91673014478619,
+            33.83359716584023
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke-width": 20,
+        "stroke": "#00ff05",
+        "stroke-opacity": 1,
+        "kind": "text-label",
+        "group": "food",
+        "label": "Food"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.9172750665742,
+            33.83339458379898
+          ],
+          [
+            -117.91730555170761,
+            33.833346048449044
+          ],
+          [
+            -117.9173411176969,
+            33.83331122959453
+          ],
+          [
+            -117.91739700710819,
+            33.83328801701589
+          ],
+          [
+            -117.91746178801694,
+            33.83327852095994
+          ],
+          [
+            -117.91752783914029,
+            33.833284851664345
+          ],
+          [
+            -117.91759770090424,
+            33.833316505178644
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#ff23c9",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "crafts",
+        "label": "Crafts"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91769310049473,
+            33.83339269896675
+          ],
+          [
+            -117.9177145471034,
+            33.8334213299586
+          ],
+          [
+            -117.91772144065658,
+            33.83347795567107
+          ],
+          [
+            -117.91770918545123,
+            33.83353140012879
+          ],
+          [
+            -117.91768237719,
+            33.833600750625706
+          ],
+          [
+            -117.91762033521415,
+            33.83365292252181
+          ],
+          [
+            -117.91753454877795,
+            33.833688552091274
+          ],
+          [
+            -117.9174472304415,
+            33.83368918833345
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#e5ff00",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "city",
+        "label": "City of Anaheim"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91612816544259,
+            33.833733270002696
+          ],
+          [
+            -117.91569104369516,
+            33.83383031922371
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#6462f5",
+        "stroke-width": 5,
+        "stroke-opacity": 1,
+        "fill-opacity": 0.1,
+        "kind": "festival-initial-bounds",
+        "fill": "#615fe7"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.9128024,
+              33.8332716
+            ],
+            [
+              -117.913379,
+              33.8351751
+            ],
+            [
+              -117.9134287,
+              33.8353774
+            ],
+            [
+              -117.9184939,
+              33.8341428
+            ],
+            [
+              -117.9179471,
+              33.832132
+            ],
+            [
+              -117.9128024,
+              33.8332716
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#e93be3",
+        "marker-size": "large",
+        "marker-symbol": "dog-park",
+        "kind": "second-stage"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91560969887527,
+          33.83439046257999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#77cafb",
+        "stroke-width": 5,
+        "stroke-opacity": 1,
+        "fill": "#8ac6f5",
+        "fill-opacity": 0.1,
+        "kind": "parade-initial-bounds"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.90441021288346,
+              33.83075688926327
+            ],
+            [
+              -117.90788926682217,
+              33.84170032610531
+            ],
+            [
+              -117.93583791742341,
+              33.83495209689048
+            ],
+            [
+              -117.93166102064399,
+              33.82378091721784
+            ],
+            [
+              -117.90441021288346,
+              33.83075688926327
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ff000d",
+        "marker-size": "large",
+        "marker-symbol": "hospital",
+        "kind": "first-aid"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91541053991905,
+          33.833581556011126
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "festival-center",
+        "marker-color": "#ff6d00",
+        "marker-size": "medium",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91578691666828,
+          33.83384941111494
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#00fff4",
+        "stroke-width": 5,
+        "stroke-opacity": 0.5,
+        "fill-opacity": 0.1,
+        "kind": "map-max-bounds",
+        "fill": "#00fff4"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ],
+            [
+              -117.94166283493314,
+              33.847150653168
+            ],
+            [
+              -117.94173386667563,
+              33.8336010802066
+            ],
+            [
+              -117.94159180319089,
+              33.81801483485654
+            ],
+            [
+              -117.89390591570934,
+              33.818044333177426
+            ],
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 10
+    },
+    {
       "type": "Feature",
       "properties": {
         "marker-color": "#007e15",
@@ -258,7 +444,6 @@
       }
     },
     {
-      "id": "main-stage",
       "type": "Feature",
       "properties": {
         "marker-color": "#e93be3",
@@ -270,23 +455,6 @@
         "coordinates": [
           -117.9170855680714,
           33.8338338342858
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "id": "second-stage",
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#e93be3",
-        "marker-size": "large",
-        "marker-symbol": "dog-park",
-        "kind": "second-stage"
-      },
-      "geometry": {
-        "coordinates": [
-          -117.91560969887527,
-          33.83439046257999
         ],
         "type": "Point"
       }
@@ -382,8 +550,8 @@
       },
       "geometry": {
         "coordinates": [
-          -117.91720333987494,
-          33.833471534487444
+          -117.91723382500835,
+          33.8334567628752
         ],
         "type": "Point"
       }
@@ -799,36 +967,80 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#ff000d",
-        "marker-size": "large",
-        "marker-symbol": "hospital",
-        "kind": "first-aid"
+        "kind": "text-label",
+        "stroke": "#00fff1",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "text-label": "Artists",
+        "group": "artists"
       },
       "geometry": {
         "coordinates": [
-          -117.91541053991905,
-          33.833581556011126
+          [
+            -117.91511961781194,
+            33.83395948173683
+          ],
+          [
+            -117.91459286809115,
+            33.83407412256638
+          ],
+          [
+            -117.91454175265594,
+            33.834084375234326
+          ],
+          [
+            -117.91451842267396,
+            33.83408454421082
+          ],
+          [
+            -117.91449475741587,
+            33.834079143222255
+          ],
+          [
+            -117.91448355805689,
+            33.83407003452754
+          ],
+          [
+            -117.91447839366812,
+            33.83405869784655
+          ],
+          [
+            -117.9144607418836,
+            33.83401357110945
+          ],
+          [
+            -117.9143613371971,
+            33.83371916466892
+          ]
         ],
-        "type": "Point"
+        "type": "LineString"
       },
-      "id": 22
+      "id": 28
     },
     {
       "type": "Feature",
       "properties": {
-        "kind": "festival-center",
-        "marker-color": "#ff6d00",
-        "marker-size": "medium",
-        "marker-symbol": "circle"
+        "kind": "text-label",
+        "stroke": "#e93ec4",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "crafts",
+        "label": "Crafts"
       },
       "geometry": {
         "coordinates": [
-          -117.91578691666828,
-          33.83384941111494
+          [
+            -117.91414501948302,
+            33.83375554066859
+          ],
+          [
+            -117.91390680968107,
+            33.83380407493861
+          ]
         ],
-        "type": "Point"
+        "type": "LineString"
       },
-      "id": 23
+      "id": 29
     }
   ]
 }
