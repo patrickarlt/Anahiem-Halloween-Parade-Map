@@ -42,6 +42,16 @@ const map = new Map({
 
 map.addControl(new maplibregl.NavigationControl(), "top-left");
 
+map.addControl(
+  new maplibregl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true,
+    },
+    trackUserLocation: true,
+  }),
+  "top-left"
+);
+
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;
 

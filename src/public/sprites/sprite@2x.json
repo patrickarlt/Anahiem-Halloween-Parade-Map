@@ -3,63 +3,98 @@
     "height": 122,
     "pixelRatio": 2,
     "width": 386,
-    "x": 448,
-    "y": 176
+    "x": 412,
+    "y": 352
   },
-  "First Aid": {
+  "First-Aid": {
     "height": 82,
     "pixelRatio": 2,
     "width": 78,
-    "x": 864,
-    "y": 78
+    "x": 834,
+    "y": 184
+  },
+  "Food": {
+    "height": 92,
+    "pixelRatio": 2,
+    "width": 90,
+    "x": 820,
+    "y": 0
   },
   "Information": {
     "height": 158,
     "pixelRatio": 2,
     "width": 94,
-    "x": 834,
+    "x": 740,
     "y": 176
   },
   "Lemon-Stage": {
     "height": 226,
     "pixelRatio": 2,
-    "width": 448,
+    "width": 412,
     "x": 0,
     "y": 236
   },
   "Main-Stage": {
     "height": 236,
     "pixelRatio": 2,
-    "width": 440,
+    "width": 396,
     "x": 0,
     "y": 0
+  },
+  "Museum": {
+    "height": 92,
+    "pixelRatio": 2,
+    "width": 90,
+    "x": 798,
+    "y": 334
+  },
+  "POI": {
+    "height": 92,
+    "pixelRatio": 2,
+    "width": 90,
+    "x": 834,
+    "y": 92
   },
   "Parade-Banner": {
     "height": 176,
     "pixelRatio": 2,
     "width": 424,
-    "x": 440,
+    "x": 396,
     "y": 0
+  },
+  "Parade-End": {
+    "height": 176,
+    "pixelRatio": 2,
+    "width": 328,
+    "x": 412,
+    "y": 176
   },
   "Parking": {
     "height": 78,
     "pixelRatio": 2,
     "width": 90,
-    "x": 864,
-    "y": 0
+    "x": 798,
+    "y": 426
   },
   "Restroom": {
     "height": 78,
     "pixelRatio": 2,
     "width": 78,
-    "x": 942,
-    "y": 78
+    "x": 912,
+    "y": 184
+  },
+  "Town-Hall": {
+    "height": 92,
+    "pixelRatio": 2,
+    "width": 90,
+    "x": 910,
+    "y": 0
   },
   "Water": {
     "height": 92,
     "pixelRatio": 2,
     "width": 68,
-    "x": 928,
-    "y": 160
+    "x": 888,
+    "y": 266
   }
 }
