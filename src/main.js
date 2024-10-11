@@ -40,6 +40,8 @@ const map = new Map({
   maxZoom: 20,
 });
 
+map.addControl(new maplibregl.NavigationControl(), "top-left");
+
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;
 

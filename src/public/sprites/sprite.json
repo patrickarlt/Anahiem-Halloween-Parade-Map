@@ -1,23 +1,65 @@
 {
-  "festival": {
-    "height": 84,
+  "Festival-Banner": {
+    "height": 61,
     "pixelRatio": 1,
-    "width": 191,
-    "x": 0,
+    "width": 193,
+    "x": 224,
     "y": 88
   },
-  "parade": {
-    "height": 88,
+  "First Aid": {
+    "height": 41,
     "pixelRatio": 1,
-    "width": 212,
+    "width": 39,
+    "x": 432,
+    "y": 39
+  },
+  "Information": {
+    "height": 79,
+    "pixelRatio": 1,
+    "width": 47,
+    "x": 417,
+    "y": 88
+  },
+  "Lemon-Stage": {
+    "height": 113,
+    "pixelRatio": 1,
+    "width": 224,
+    "x": 0,
+    "y": 118
+  },
+  "Main-Stage": {
+    "height": 118,
+    "pixelRatio": 1,
+    "width": 220,
     "x": 0,
     "y": 0
   },
-  "parking": {
-    "height": 35,
+  "Parade-Banner": {
+    "height": 88,
     "pixelRatio": 1,
-    "width": 41,
-    "x": 191,
-    "y": 88
+    "width": 212,
+    "x": 220,
+    "y": 0
+  },
+  "Parking": {
+    "height": 39,
+    "pixelRatio": 1,
+    "width": 45,
+    "x": 432,
+    "y": 0
+  },
+  "Restroom": {
+    "height": 39,
+    "pixelRatio": 1,
+    "width": 39,
+    "x": 471,
+    "y": 39
+  },
+  "Water": {
+    "height": 46,
+    "pixelRatio": 1,
+    "width": 34,
+    "x": 464,
+    "y": 80
   }
 }
