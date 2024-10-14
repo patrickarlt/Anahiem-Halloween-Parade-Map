@@ -1,5 +1,5 @@
 import maplibregl, { Map, LngLatBounds } from "maplibre-gl";
-import MapboxDraw from "@mapbox/mapbox-gl-draw";
+// import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import { Protocol } from "pmtiles";
 import { bbox as findBoundingBox, truncate } from "@turf/turf";
 import featureData from "./map/features.json";
@@ -10,10 +10,10 @@ import "./style.css";
 
 import mapStyle from "./map/style.js";
 
-const DRAW = false;
-MapboxDraw.constants.classes.CONTROL_BASE = "maplibregl-ctrl";
-MapboxDraw.constants.classes.CONTROL_PREFIX = "maplibregl-ctrl-";
-MapboxDraw.constants.classes.CONTROL_GROUP = "maplibregl-ctrl-group";
+// const DRAW = true;
+// MapboxDraw.constants.classes.CONTROL_BASE = "maplibregl-ctrl";
+// MapboxDraw.constants.classes.CONTROL_PREFIX = "maplibregl-ctrl-";
+// MapboxDraw.constants.classes.CONTROL_GROUP = "maplibregl-ctrl-group";
 
 let protocol = new Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
@@ -38,6 +38,7 @@ const map = new Map({
   maxBounds: maxBounds,
   minZoom: 15.5,
   maxZoom: 20,
+  attributionControl: false,
 });
 
 map.addControl(new maplibregl.NavigationControl(), "top-left");
@@ -55,38 +56,42 @@ map.addControl(
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;
 
-let drawControl = new MapboxDraw();
-if (DRAW) {
-  map.addControl(drawControl, "top-left");
-}
+// let drawControl = new MapboxDraw();
+// if (DRAW) {
+//   map.addControl(drawControl, "top-left");
+// }
 
 map.on("load", function () {
+  map.once("movestart", () => {
+    document.getElementById("attribution").style.opacity = "0";
+  });
+
   map.on("zoomend", function () {
     const zoom = map.getZoom();
     console.log("Zoom: ", zoom);
   });
 
-  map.on("draw.create", function (e) {
-    console.log(
-      JSON.stringify(truncate(e.features[0], { precision: 7 }), null, 2)
-    );
-    console.log(JSON.stringify(bbox(e.features[0]), null, 2));
-  });
+  // map.on("draw.create", function (e) {
+  //   console.log(
+  //     JSON.stringify(truncate(e.features[0], { precision: 7 }), null, 2)
+  //   );
+  //   console.log(JSON.stringify(bbox(e.features[0]), null, 2));
+  // });
 
-  map.on("click", (e) => {
-    const features = map.queryRenderedFeatures(e.point);
+  // map.on("click", (e) => {
+  //   const features = map.queryRenderedFeatures(e.point);
 
-    const displayFeatures = features.map((feature) => {
-      const layer = feature.layer;
-      const displayFeat = {
-        id: layer.id,
-        source: layer.source,
-        sourceLayer: layer["source-layer"],
-        properties: feature.properties,
-      };
-      return displayFeat;
-    });
+  //   const displayFeatures = features.map((feature) => {
+  //     const layer = feature.layer;
+  //     const displayFeat = {
+  //       id: layer.id,
+  //       source: layer.source,
+  //       sourceLayer: layer["source-layer"],
+  //       properties: feature.properties,
+  //     };
+  //     return displayFeat;
+  //   });
 
-    console.log(JSON.stringify(displayFeatures, null, 2));
-  });
+  //   console.log(JSON.stringify(displayFeatures, null, 2));
+  // });
 });

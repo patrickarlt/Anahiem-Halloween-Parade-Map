@@ -77,7 +77,7 @@ const PoiTextSize = [
   28,
 ];
 
-const PoiIconSize = ["interpolate", ["linear", 1], ["zoom"], 17, 0.5, 20, 0.75];
+const PoiIconSize = ["interpolate", ["linear", 1], ["zoom"], 17, 0.5, 20, 0.85];
 export default {
   version: 8,
   glyphs: "./fonts/{fontstack}/{range}.pbf",
@@ -85,7 +85,7 @@ export default {
   sources: {
     protomaps: {
       type: "vector",
-      url: "pmtiles://./ahp-tiles.pmtiles",
+      url: "pmtiles://./ahp-tiles-2.pmtiles",
     },
     features: {
       type: "geojson",
@@ -186,20 +186,46 @@ export default {
           15,
           0.65,
           18,
-          0.25,
+          0.15,
         ],
       },
     },
     {
-      id: "festival-outline",
-      type: "line",
+      id: "stages",
+      type: "fill",
       source: "features",
-      filter: ["==", "kind", "festival-outline"],
+      filter: ["==", "kind", "stage"],
       layout: {},
       paint: {
-        "line-color": "#FFC023",
-        // "line-color": "#FFC023",
-        "line-width": ["interpolate", ["linear", 1], ["zoom"], 16, 0, 18, 5],
+        // "fill-color": "#FFC023",
+        "fill-color": [
+          "interpolate",
+          ["exponential", 2],
+          ["zoom"],
+          15,
+          "#FFC023",
+          18,
+          "#FED777",
+        ],
+      },
+    },
+    {
+      id: "stages-outline",
+      type: "line",
+      source: "features",
+      filter: ["==", "kind", "stage"],
+      layout: {},
+      paint: {
+        "line-color": [
+          "interpolate",
+          ["exponential", 2],
+          ["zoom"],
+          15,
+          "#FFC023",
+          17,
+          "#FED777",
+        ],
+        "line-width": 3,
       },
     },
     /**
@@ -913,7 +939,7 @@ export default {
       layout: {
         "symbol-placement": "line",
         "text-font": [RoadLabelFont],
-        "text-ignore-placement": true,
+
         "text-field": [
           "case",
           [
@@ -1231,7 +1257,6 @@ export default {
       layout: {
         "symbol-placement": "line",
         "text-font": [RoadLabelFont],
-        "text-ignore-placement": true,
         "text-field": [
           "case",
           [
@@ -1544,7 +1569,6 @@ export default {
         ["in", "kind_detail", "primary", "secondary"],
       ],
       layout: {
-        "text-ignore-placement": true,
         "symbol-spacing": [
           "interpolate",
           ["linear", 1],
@@ -2184,7 +2208,6 @@ export default {
       filter: ["==", "kind", "parade-route"],
       layout: {
         "symbol-placement": "line",
-        "text-ignore-placement": true,
         "text-allow-overlap": true,
         "symbol-spacing": [
           "interpolate",
@@ -2233,7 +2256,7 @@ export default {
         "icon-ignore-placement": true,
         "text-field": "{label}",
         "text-anchor": "top",
-        "text-radial-offset": 1.5,
+        "text-radial-offset": 1,
         "text-justify": "auto",
         "text-font": ["Chickweed Titling Regular"],
         "text-size": PoiTextSize,
@@ -2262,7 +2285,7 @@ export default {
         "icon-ignore-placement": true,
         "text-field": "{label}",
         "text-anchor": "top",
-        "text-radial-offset": 1.5,
+        "text-radial-offset": 1,
         "text-justify": "auto",
         "text-font": ["Chickweed Titling Regular"],
         "text-size": PoiTextSize,
@@ -2347,15 +2370,7 @@ export default {
         "symbol-placement": "point",
         "icon-image": "Restroom",
         "icon-anchor": "center",
-        "icon-size": [
-          "interpolate",
-          ["linear", 1],
-          ["zoom"],
-          15,
-          0.35,
-          20,
-          1.25,
-        ],
+        "icon-size": ["interpolate", ["linear", 1], ["zoom"], 15, 0.35, 20, 1],
         "icon-allow-overlap": true,
         "symbol-sort-key": 60,
         "icon-overlap": "cooperative",
@@ -2426,15 +2441,7 @@ export default {
         "icon-image": "Parking",
         "icon-anchor": "center",
         "icon-overlap": "cooperative",
-        "icon-size": [
-          "interpolate",
-          ["linear", 1],
-          ["zoom"],
-          15,
-          0.65,
-          20,
-          1.25,
-        ],
+        "icon-size": ["interpolate", ["linear", 1], ["zoom"], 15, 0.65, 20, 1],
         "icon-allow-overlap": true,
         "symbol-sort-key": 80,
       },
@@ -2462,7 +2469,7 @@ export default {
         "symbol-placement": "point",
         "icon-image": "Lemon-Stage",
         "icon-anchor": "bottom",
-        "icon-offset": [-8, 10],
+        "icon-offset": [-14, 8],
         "icon-allow-overlap": true,
         "symbol-sort-key": 100,
       },
@@ -2479,7 +2486,7 @@ export default {
         "symbol-placement": "point",
         "icon-image": "Main-Stage",
         "icon-anchor": "bottom",
-        "icon-offset": [0, 10],
+        "icon-offset": [-14, 10],
         "icon-allow-overlap": true,
         "symbol-sort-key": 120,
       },

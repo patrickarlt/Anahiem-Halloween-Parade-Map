@@ -4,6 +4,136 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#00fff4",
+        "stroke-width": 5,
+        "stroke-opacity": 0.5,
+        "fill-opacity": 0.1,
+        "kind": "map-max-bounds",
+        "fill": "#00fff4"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ],
+            [
+              -117.94166283493314,
+              33.847150653168
+            ],
+            [
+              -117.94173386667563,
+              33.8336010802066
+            ],
+            [
+              -117.94159180319089,
+              33.81801483485654
+            ],
+            [
+              -117.89390591570934,
+              33.818044333177426
+            ],
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#00ffe7",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "label": "Artists Corner",
+        "group": "artists",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91443695890433,
+            33.83406580170096
+          ],
+          [
+            -117.91432094584636,
+            33.83374043808368
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#77cafb",
+        "stroke-width": 5,
+        "stroke-opacity": 1,
+        "fill": "#8ac6f5",
+        "fill-opacity": 0.1,
+        "kind": "parade-initial-bounds"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.90441021288346,
+              33.83075688926327
+            ],
+            [
+              -117.90788926682217,
+              33.84170032610531
+            ],
+            [
+              -117.93583791742341,
+              33.83495209689048
+            ],
+            [
+              -117.93166102064399,
+              33.82378091721784
+            ],
+            [
+              -117.90441021288346,
+              33.83075688926327
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#e93ec4",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "crafts",
+        "label": "Crafts",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91412804914185,
+            33.833753801499995
+          ],
+          [
+            -117.91372066062183,
+            33.83384750297195
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "stroke": "#6462f5",
         "stroke-width": 5,
         "stroke-opacity": 1,
@@ -75,8 +205,8 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "notes": "Test.",
-        "label": "Restroom"
+        "label": "Restroom",
+        "note": "Inside parking structure."
       },
       "geometry": {
         "coordinates": [
@@ -84,7 +214,8 @@
           33.83425088790402
         ],
         "type": "Point"
-      }
+      },
+      "id": 6
     },
     {
       "type": "Feature",
@@ -204,7 +335,8 @@
         "marker-size": "large",
         "marker-symbol": "parking-garage",
         "kind": "parking",
-        "label": "Parking"
+        "label": "Parking",
+        "note": "Enter from the west on South Clementine Street. "
       },
       "geometry": {
         "coordinates": [
@@ -212,7 +344,8 @@
           33.83412744207335
         ],
         "type": "Point"
-      }
+      },
+      "id": 9
     },
     {
       "type": "Feature",
@@ -221,7 +354,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "notes": "Test.",
+        "note": "Inside parking structure.",
         "label": "Restroom"
       },
       "geometry": {
@@ -230,7 +363,8 @@
           33.834026143983436
         ],
         "type": "Point"
-      }
+      },
+      "id": 10
     },
     {
       "type": "Feature",
@@ -239,7 +373,8 @@
         "marker-size": "large",
         "marker-symbol": "parking-garage",
         "kind": "parking",
-        "label": "Parking"
+        "label": "Parking",
+        "note": "Enter on Broadway."
       },
       "geometry": {
         "coordinates": [
@@ -247,7 +382,8 @@
           33.83276213631761
         ],
         "type": "Point"
-      }
+      },
+      "id": 11
     },
     {
       "type": "Feature",
@@ -256,7 +392,8 @@
         "marker-size": "large",
         "marker-symbol": "parking-garage",
         "kind": "parking",
-        "label": "Parking"
+        "label": "Parking",
+        "note": "Enter from Center Steet Promenade"
       },
       "geometry": {
         "coordinates": [
@@ -264,7 +401,8 @@
           33.83438826334914
         ],
         "type": "Point"
-      }
+      },
+      "id": 12
     },
     {
       "type": "Feature",
@@ -273,7 +411,8 @@
         "marker-size": "large",
         "marker-symbol": "parking-garage",
         "kind": "parking",
-        "label": "Parking"
+        "label": "Parking",
+        "note": "On E. Center Street across from the downtown community center."
       },
       "geometry": {
         "coordinates": [
@@ -281,7 +420,8 @@
           33.836108935911966
         ],
         "type": "Point"
-      }
+      },
+      "id": 13
     },
     {
       "type": "Feature",
@@ -290,7 +430,7 @@
         "marker-color": "#4463e5",
         "marker-size": "large",
         "marker-symbol": "toilet",
-        "notes": "Test.",
+        "note": "Inside Muzeo main gallery lobby.",
         "label": "Restroom"
       },
       "geometry": {
@@ -299,7 +439,8 @@
           33.83366094332308
         ],
         "type": "Point"
-      }
+      },
+      "id": 14
     },
     {
       "type": "Feature",
@@ -308,7 +449,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "notes": "Test.",
+        "note": "In Anaheim City Hall West Lobby",
         "label": "Restroom"
       },
       "geometry": {
@@ -317,7 +458,8 @@
           33.834468394784096
         ],
         "type": "Point"
-      }
+      },
+      "id": 15
     },
     {
       "type": "Feature",
@@ -326,7 +468,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "notes": "Test.",
+        "note": "Restroom trailer.",
         "label": "Restroom"
       },
       "geometry": {
@@ -335,7 +477,8 @@
           33.833258520010986
         ],
         "type": "Point"
-      }
+      },
+      "id": 16
     },
     {
       "type": "Feature",
@@ -586,139 +729,18 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 23
     },
     {
       "type": "Feature",
       "properties": {
-        "kind": "text-label",
-        "stroke": "#00ffff",
+        "stroke": "#00ff02",
         "stroke-width": 20,
         "stroke-opacity": 1,
-        "label": "Artists Corner"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91458649770486,
-            33.8340780955735
-          ],
-          [
-            -117.91455554807601,
-            33.83408655228902
-          ],
-          [
-            -117.91452337675125,
-            33.834087228826036
-          ],
-          [
-            -117.91449364881832,
-            33.83408080172238
-          ],
-          [
-            -117.91447776677187,
-            33.8340713302006
-          ],
-          [
-            -117.91446331003745,
-            33.83405255628486
-          ],
-          [
-            -117.91445536901401,
-            33.83402498738167
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#00fff4",
-        "stroke-width": 5,
-        "stroke-opacity": 0.5,
         "fill-opacity": 0.1,
-        "kind": "map-max-bounds",
-        "fill": "#00fff4"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ],
-            [
-              -117.94166283493314,
-              33.847150653168
-            ],
-            [
-              -117.94173386667563,
-              33.8336010802066
-            ],
-            [
-              -117.94159180319089,
-              33.81801483485654
-            ],
-            [
-              -117.89390591570934,
-              33.818044333177426
-            ],
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#77cafb",
-        "stroke-width": 5,
-        "stroke-opacity": 1,
-        "fill": "#8ac6f5",
-        "fill-opacity": 0.1,
-        "kind": "parade-initial-bounds"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ],
-            [
-              -117.90788926682217,
-              33.84170032610531
-            ],
-            [
-              -117.93583791742341,
-              33.83495209689048
-            ],
-            [
-              -117.93166102064399,
-              33.82378091721784
-            ],
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke-width": 20,
-        "stroke": "#00ff05",
-        "stroke-opacity": 1,
         "kind": "text-label",
-        "group": "food",
+        "fill": "#00fff4",
         "label": "Food Vendors",
         "icon": "Food"
       },
@@ -766,7 +788,8 @@
           ]
         ],
         "type": "LineString"
-      }
+      },
+      "id": 24
     },
     {
       "type": "Feature",
@@ -788,31 +811,6 @@
           [
             -117.91670921245313,
             33.83352675243526
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#e93ec4",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "group": "crafts",
-        "label": "Crafts",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91417617378265,
-            33.833739856713194
-          ],
-          [
-            -117.91383034003626,
-            33.83382054307974
           ]
         ],
         "type": "LineString"
@@ -853,33 +851,8 @@
             33.833959385421764
           ],
           [
-            -117.91461381770435,
-            33.83407166758329
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#00ffe7",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "label": "Artists Corner",
-        "group": "artists",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91445076135679,
-            33.834015642065495
-          ],
-          [
-            -117.9143485507513,
-            33.83372753984543
+            -117.91454998136224,
+            33.8340917314288
           ]
         ],
         "type": "LineString"
@@ -1321,6 +1294,84 @@
           33.8297431
         ],
         "type": "Point"
+      }
+    },
+    {
+      "id": 39,
+      "type": "Feature",
+      "properties": {
+        "kind": "stage",
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.91706,
+              33.8339121
+            ],
+            [
+              -117.9169603,
+              33.8338343
+            ],
+            [
+              -117.9171298,
+              33.8336802
+            ],
+            [
+              -117.9172215,
+              33.8337614
+            ],
+            [
+              -117.91706,
+              33.8339121
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "id": 40,
+      "type": "Feature",
+      "properties": {
+        "kind": "stage",
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.9157025,
+              33.8343966
+            ],
+            [
+              -117.915553,
+              33.8344248
+            ],
+            [
+              -117.9155171,
+              33.8343569
+            ],
+            [
+              -117.9156726,
+              33.8343287
+            ],
+            [
+              -117.9157025,
+              33.8343966
+            ]
+          ]
+        ],
+        "type": "Polygon"
       }
     }
   ]
