@@ -894,7 +894,7 @@
     {
       "type": "Feature",
       "properties": {
-        "kind": "packing-house",
+        "kind": "restaurants",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "restaurant",
