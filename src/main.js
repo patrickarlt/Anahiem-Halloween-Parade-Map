@@ -48,9 +48,9 @@ map.addControl(
   new NavigationControl({
     showCompass: false,
   }),
-  "top-left"
+  "top-right"
 );
-map.addControl(new FullscreenControl(), "top-right");
+map.addControl(new FullscreenControl(), "bottom-left");
 map.addControl(
   new GeolocateControl({
     positionOptions: {
@@ -58,7 +58,7 @@ map.addControl(
     },
     trackUserLocation: true,
   }),
-  "top-left"
+  "top-right"
 );
 
 window.__AHP_DEBUG__ = {};
