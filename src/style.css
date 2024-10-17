@@ -2,6 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-.button {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+@font-face {
+  font-family: "Komika Title";
+  src:
+    url("https://www.anaheimfallfestival.org/wp-content/themes/aff-2022/fonts/komtit__-webfont.woff2") format("woff2"),
+    url("https://www.anaheimfallfestival.org/wp-content/themes/aff-2022/fonts/komtit__-webfont.woff") format("woff");
+}
+
+#map-wrapper {
+  font-family: Komika Title,
+      Impact,
+      Haettenschweiler,
+      "Arial Narrow Bold",
+      sans-serif;
+}
+
+#map {
+  @apply absolute w-full h-full;
+}
+
+#attribution {
+  @apply transition-opacity duration-300 absolute bottom-0 right-0 text-xs italic bg-[#FFFCE1] p-1 border border-t border-r border-[#F4CE99] text-[#B17048];
+}
+
+.ahp-popup {
+  background-image: url(./svgs/Popup_Background.svg);
+  background-repeat: no-repeat;
+  width: 233px;
+  height: 120px;
+  flex-direction: column;
+  color: #C23D1C;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: Komika Title,
+      Impact,
+      Haettenschweiler,
+      "Arial Narrow Bold",
+      sans-serif;
+}
+
+.ahp-popup .maplibregl-popup-content {
+  display: grid;
+    place-items: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  height: calc(100% - 20px);
+  text-align: center;
+}
+
+.ahp-popup .maplibregl-popup-close-button {
+  background-color: transparent;
+  background-image: url(./svgs/Close_Button.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 11px;
+  height: 19px;
+  top: 15px;
+  right: 15px;
+  text-indent: -9999px;
+}
+
+.maplibregl-popup-tip {
+  display: none;
+  
 }

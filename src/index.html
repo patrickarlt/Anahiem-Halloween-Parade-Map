@@ -6,9 +6,10 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class=" h-screen w-screen">
-      <div id="map" class="absolute w-full h-full"></div>
-      <div id="attribution" class="transition-opacity duration-300 absolute bottom-0 right-0 text-xs italic bg-[#FFFCE1] p-1 border border-top-1 border-right-1 border-[#F4CE99] text-[#B17048]">Map data from <a href='https://www.openstreetmap.org'>OpenStreetMap</a></div>
+    <div id="map-wrapper" 
+    class="relative h-screen w-screen">
+      <div id="map" class=""></div>
+      <div id="attribution">Map data from <a href='https://www.openstreetmap.org'>OpenStreetMap</a></div>
     </div>
 
     <script type="module" src="./main.js"></script>

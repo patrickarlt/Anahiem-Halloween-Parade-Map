@@ -206,7 +206,7 @@
         "marker-symbol": "toilet",
         "kind": "restroom",
         "label": "Restroom",
-        "note": "Inside parking structure."
+        "note": "Restroom located inside parking structure."
       },
       "geometry": {
         "coordinates": [
@@ -336,7 +336,7 @@
         "marker-symbol": "parking-garage",
         "kind": "parking",
         "label": "Parking",
-        "note": "Enter from the west on South Clementine Street. "
+        "note": "Enter parking garage from the west on South Clementine Street. "
       },
       "geometry": {
         "coordinates": [
@@ -354,7 +354,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "note": "Inside parking structure.",
+        "note": "Restroom located inside parking structure.",
         "label": "Restroom"
       },
       "geometry": {
@@ -374,7 +374,7 @@
         "marker-symbol": "parking-garage",
         "kind": "parking",
         "label": "Parking",
-        "note": "Enter on Broadway."
+        "note": "Enter parking garage from Broadway."
       },
       "geometry": {
         "coordinates": [
@@ -393,7 +393,7 @@
         "marker-symbol": "parking-garage",
         "kind": "parking",
         "label": "Parking",
-        "note": "Enter from Center Steet Promenade"
+        "note": "Enter parking garage from Center Steet Promenade."
       },
       "geometry": {
         "coordinates": [
@@ -430,7 +430,7 @@
         "marker-color": "#4463e5",
         "marker-size": "large",
         "marker-symbol": "toilet",
-        "note": "Inside Muzeo main gallery lobby.",
+        "note": "Restroom located inside Muzeo main gallery lobby.",
         "label": "Restroom"
       },
       "geometry": {
@@ -449,7 +449,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "note": "In Anaheim City Hall West Lobby",
+        "note": "Restroom located inside Anaheim City Hall West lobby",
         "label": "Restroom"
       },
       "geometry": {
@@ -468,7 +468,7 @@
         "marker-size": "large",
         "marker-symbol": "toilet",
         "kind": "restroom",
-        "note": "Restroom trailer.",
+        "note": "Restroom trailer located behind food area.",
         "label": "Restroom"
       },
       "geometry": {

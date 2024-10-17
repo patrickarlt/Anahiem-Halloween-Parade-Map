@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import tailwindcss from "tailwindcss";
 import mkcert from "vite-plugin-mkcert";
+
 export default defineConfig({
   plugins: [mkcert()],
   css: {

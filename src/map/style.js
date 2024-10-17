@@ -70,14 +70,22 @@ const PoiTextSize = [
   ["exponential", 1.6],
   ["zoom"],
   15,
-  12,
+  18,
   18,
   20,
   20,
   28,
 ];
 
-const PoiIconSize = ["interpolate", ["linear", 1], ["zoom"], 17, 0.5, 20, 0.85];
+const PoiIconSize = [
+  "interpolate",
+  ["linear", 1],
+  ["zoom"],
+  17,
+  0.75,
+  20,
+  0.85,
+];
 export default {
   version: 8,
   glyphs: "./fonts/{fontstack}/{range}.pbf",
@@ -85,7 +93,7 @@ export default {
   sources: {
     protomaps: {
       type: "vector",
-      url: "pmtiles://./ahp-tiles-2.pmtiles",
+      url: "pmtiles://./tiles/halloween-parade.pmtiles",
     },
     features: {
       type: "geojson",

@@ -1,22 +1,23 @@
-import maplibregl, { Map, LngLatBounds } from "maplibre-gl";
-// import MapboxDraw from "@mapbox/mapbox-gl-draw";
+import {
+  Map,
+  LngLatBounds,
+  addProtocol,
+  NavigationControl,
+  FullscreenControl,
+  GeolocateControl,
+  Popup,
+} from "maplibre-gl";
 import { Protocol } from "pmtiles";
-import { bbox as findBoundingBox, truncate } from "@turf/turf";
+import { bbox as findBoundingBox } from "@turf/turf";
 import featureData from "./map/features.json";
 
 import "maplibre-gl/dist/maplibre-gl.css";
-import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import "./style.css";
 
 import mapStyle from "./map/style.js";
 
-// const DRAW = true;
-// MapboxDraw.constants.classes.CONTROL_BASE = "maplibregl-ctrl";
-// MapboxDraw.constants.classes.CONTROL_PREFIX = "maplibregl-ctrl-";
-// MapboxDraw.constants.classes.CONTROL_GROUP = "maplibregl-ctrl-group";
-
 let protocol = new Protocol();
-maplibregl.addProtocol("pmtiles", protocol.tile);
+addProtocol("pmtiles", protocol.tile);
 
 function boundsForFeature(kind) {
   const feature = featureData.features.find((f) => f.properties.kind === kind);
@@ -41,10 +42,15 @@ const map = new Map({
   attributionControl: false,
 });
 
-map.addControl(new maplibregl.NavigationControl(), "top-left");
-
 map.addControl(
-  new maplibregl.GeolocateControl({
+  new NavigationControl({
+    showCompass: false,
+  }),
+  "top-left"
+);
+map.addControl(new FullscreenControl(), "top-right");
+map.addControl(
+  new GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true,
     },
@@ -56,14 +62,21 @@ map.addControl(
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;
 
-// let drawControl = new MapboxDraw();
-// if (DRAW) {
-//   map.addControl(drawControl, "top-left");
-// }
+const popup = new Popup({
+  anchor: "bottom",
+  className: "ahp-popup",
+  closeOnClick: true,
+  closeOnMove: true,
+  offset: [7, 0],
+});
 
 map.on("load", function () {
   map.once("movestart", () => {
     document.getElementById("attribution").style.opacity = "0";
+  });
+
+  map.on("moveend", () => {
+    popup.remove();
   });
 
   map.on("zoomend", function () {
@@ -71,27 +84,25 @@ map.on("load", function () {
     console.log("Zoom: ", zoom);
   });
 
-  // map.on("draw.create", function (e) {
-  //   console.log(
-  //     JSON.stringify(truncate(e.features[0], { precision: 7 }), null, 2)
-  //   );
-  //   console.log(JSON.stringify(bbox(e.features[0]), null, 2));
-  // });
+  function createPopup(e) {
+    const features = map.queryRenderedFeatures(e.point);
+    const feature = features.find((f) => f.properties.note);
+    console.log(feature);
+    if (feature) {
+      const coordinates = feature.geometry.coordinates.slice();
+      const description = feature.properties.note;
 
-  // map.on("click", (e) => {
-  //   const features = map.queryRenderedFeatures(e.point);
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat > coordinates[0] ? 360 : -360;
+      }
 
-  //   const displayFeatures = features.map((feature) => {
-  //     const layer = feature.layer;
-  //     const displayFeat = {
-  //       id: layer.id,
-  //       source: layer.source,
-  //       sourceLayer: layer["source-layer"],
-  //       properties: feature.properties,
-  //     };
-  //     return displayFeat;
-  //   });
+      popup.setLngLat(coordinates).setHTML(description).addTo(map);
+    }
+  }
 
-  //   console.log(JSON.stringify(displayFeatures, null, 2));
-  // });
+  map.on("click", "restroom", createPopup);
+  map.on("click", "parking", createPopup);
 });
