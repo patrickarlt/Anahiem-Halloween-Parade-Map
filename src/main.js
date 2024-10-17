@@ -42,6 +42,8 @@ const map = new Map({
   attributionControl: false,
 });
 
+map.scrollZoom.disable();
+
 map.addControl(
   new NavigationControl({
     showCompass: false,
