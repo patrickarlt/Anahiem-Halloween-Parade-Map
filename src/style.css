@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Komika Title";
-  src:
-    url("https://www.anaheimfallfestival.org/wp-content/themes/aff-2022/fonts/komtit__-webfont.woff2") format("woff2"),
-    url("https://www.anaheimfallfestival.org/wp-content/themes/aff-2022/fonts/komtit__-webfont.woff") format("woff");
-}
-
 #map-wrapper {
   font-family: Komika Title,
       Impact,
