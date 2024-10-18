@@ -31,11 +31,17 @@ function boundsForFeature(kind) {
 const festivalBounds = boundsForFeature("festival-initial-bounds");
 const paradeBounds = boundsForFeature("parade-initial-bounds");
 const maxBounds = boundsForFeature("map-max-bounds");
+const urlParams = new URLSearchParams(window.location.search);
+const area = urlParams.get("area");
 
 const map = new Map({
   container: "map",
   style: mapStyle,
-  bounds: festivalBounds,
+  bounds: !area
+    ? festivalBounds
+    : area === "festival"
+    ? festivalBounds
+    : paradeBounds,
   maxBounds: maxBounds,
   minZoom: 15.5,
   maxZoom: 20,
@@ -50,6 +56,7 @@ map.addControl(
   }),
   "top-right"
 );
+
 map.addControl(new FullscreenControl(), "bottom-left");
 // map.addControl(
 //   new GeolocateControl({
