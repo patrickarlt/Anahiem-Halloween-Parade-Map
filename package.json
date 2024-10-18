@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://patrickarlt.github.io/Anahiem-Halloween-Parade-Map/",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite --cors",
     "build": "vite build",
     "preview": "vite preview",

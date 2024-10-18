@@ -51,15 +51,15 @@ map.addControl(
   "top-right"
 );
 map.addControl(new FullscreenControl(), "bottom-left");
-map.addControl(
-  new GeolocateControl({
-    positionOptions: {
-      enableHighAccuracy: true,
-    },
-    trackUserLocation: true,
-  }),
-  "top-right"
-);
+// map.addControl(
+//   new GeolocateControl({
+//     positionOptions: {
+//       enableHighAccuracy: true,
+//     },
+//     trackUserLocation: true,
+//   }),
+//   "top-right"
+// );
 
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;

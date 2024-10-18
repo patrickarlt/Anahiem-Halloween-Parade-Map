@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #map-wrapper {
-  font-family: Komika Title,
+  font-family: "Komika Title",
       Impact,
       Haettenschweiler,
       "Arial Narrow Bold",
@@ -18,6 +18,14 @@
   @apply transition-opacity duration-300 absolute bottom-0 right-0 text-xs italic bg-[#FFFCE1] p-1 border border-t border-r border-[#F4CE99] text-[#B17048];
 }
 
+@font-face {
+  font-family: "Komika Title";
+  src: url('./web-fonts/komtit__-webfont.woff2') format('woff2'),
+    url('./web-fonts/komtit__-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .ahp-popup {
   background-image: url(./svgs/Popup_Background.svg);
   background-repeat: no-repeat;
@@ -27,7 +35,7 @@
   color: #C23D1C;
   font-size: 1.125rem;
   line-height: 1.5rem;
-  font-family: Komika Title,
+  font-family: "Komika Title",
       Impact,
       Haettenschweiler,
       "Arial Narrow Bold",
