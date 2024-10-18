@@ -26,6 +26,38 @@
   font-style: normal;
 }
 
+.ahp-zoom-to {
+  margin: 10px 0 0 10px;
+  color: #C23D1C;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: "Komika Title",
+    Impact,
+    Haettenschweiler,
+    "Arial Narrow Bold",
+    sans-serif;
+}
+
+.ahp-zoom-to .maplibregl-ctrl-group {
+  padding: 0.25rem 0.5rem;
+  
+}
+
+.maplibregl-ctrl-group {
+  background: #FED777;
+  border: 2px solid #FFC023;
+  border-radius: 0;
+  text-shadow: 0 0 0 #FDCF56;
+}
+
+.maplibregl-ctrl-group button+button {
+  border-top: 2px solid #FFC023;
+}
+
+.maplibregl-ctrl-group:not(:empty) {
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, .2);
+}
+
 .ahp-popup {
   background-image: url(./images/Popup_Background.svg);
   background-repeat: no-repeat;

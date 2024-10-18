@@ -130,3 +130,33 @@ map.on("load", function () {
     console.log(JSON.stringify(displayFeatures, null, 2));
   });
 });
+
+class ZoomToControl {
+  onAdd(map) {
+    this._map = map;
+    this._container = document.createElement("div");
+    this._container.className = "maplibregl-ctrl ahp-zoom-to";
+    this._container.innerHTML = `
+      <button id="zoom-to-festival" class="maplibregl-ctrl-group">Zoom to Festival</button>
+      <button id="zoom-to-parade" class="maplibregl-ctrl-group">Zoom to Parade</button>
+    `;
+    this._container
+      .querySelector("#zoom-to-festival")
+      .addEventListener("click", () => {
+        map.fitBounds(festivalBounds, { padding: 10 });
+      });
+    this._container
+      .querySelector("#zoom-to-parade")
+      .addEventListener("click", () => {
+        map.fitBounds(paradeBounds, { padding: 10 });
+      });
+    return this._container;
+  }
+
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+    this._map = undefined;
+  }
+}
+
+map.addControl(new ZoomToControl(), "top-left");
