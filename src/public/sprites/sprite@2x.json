@@ -1,100 +1,121 @@
 {
+  "Close_Button": {
+    "height": 38,
+    "pixelRatio": 2,
+    "width": 22,
+    "x": 956,
+    "y": 92
+  },
   "Festival-Banner": {
     "height": 122,
     "pixelRatio": 2,
     "width": 386,
-    "x": 412,
-    "y": 352
+    "x": 308,
+    "y": 462
+  },
+  "First Aid": {
+    "height": 82,
+    "pixelRatio": 2,
+    "width": 78,
+    "x": 784,
+    "y": 462
   },
   "First-Aid": {
     "height": 82,
     "pixelRatio": 2,
     "width": 78,
-    "x": 834,
-    "y": 184
+    "x": 694,
+    "y": 540
   },
   "Food": {
     "height": 92,
     "pixelRatio": 2,
     "width": 90,
-    "x": 820,
-    "y": 0
+    "x": 878,
+    "y": 158
   },
   "Information": {
     "height": 158,
     "pixelRatio": 2,
     "width": 94,
-    "x": 740,
-    "y": 176
+    "x": 862,
+    "y": 0
   },
   "Lemon-Stage": {
     "height": 226,
     "pixelRatio": 2,
     "width": 412,
-    "x": 0,
+    "x": 466,
     "y": 236
   },
   "Main-Stage": {
     "height": 236,
     "pixelRatio": 2,
     "width": 396,
-    "x": 0,
+    "x": 466,
     "y": 0
   },
   "Museum": {
     "height": 92,
     "pixelRatio": 2,
     "width": 90,
-    "x": 798,
-    "y": 334
+    "x": 878,
+    "y": 250
   },
   "POI": {
     "height": 92,
     "pixelRatio": 2,
     "width": 90,
-    "x": 834,
-    "y": 92
+    "x": 878,
+    "y": 342
   },
   "Parade-Banner": {
-    "height": 176,
+    "height": 194,
     "pixelRatio": 2,
-    "width": 424,
-    "x": 396,
-    "y": 0
+    "width": 408,
+    "x": 0,
+    "y": 240
   },
   "Parade-End": {
-    "height": 176,
+    "height": 194,
     "pixelRatio": 2,
-    "width": 328,
-    "x": 412,
-    "y": 176
+    "width": 308,
+    "x": 0,
+    "y": 434
   },
   "Parking": {
     "height": 78,
     "pixelRatio": 2,
     "width": 90,
-    "x": 798,
-    "y": 426
+    "x": 694,
+    "y": 462
+  },
+  "Popup_Background": {
+    "height": 240,
+    "pixelRatio": 2,
+    "width": 466,
+    "x": 0,
+    "y": 0
   },
   "Restroom": {
     "height": 78,
     "pixelRatio": 2,
     "width": 78,
-    "x": 912,
-    "y": 184
+    "x": 862,
+    "y": 526
   },
   "Town-Hall": {
     "height": 92,
     "pixelRatio": 2,
     "width": 90,
-    "x": 910,
-    "y": 0
+    "x": 878,
+    "y": 434
   },
   "Water": {
     "height": 92,
     "pixelRatio": 2,
     "width": 68,
-    "x": 888,
-    "y": 266
+    "x": 956,
+    "y": 0
   }
 }

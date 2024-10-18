@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
-    "generate-sprites": "spreet ./svgs ./src/public/sprites/sprite && spreet ./svgs ./src/public/sprites/sprite@2x --retina"
+    "generate-sprites": "spreet ./src/public/svgs ./src/public/sprites/sprite && spreet ./src/public/svgs ./src/public/sprites/sprite@2x --retina"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

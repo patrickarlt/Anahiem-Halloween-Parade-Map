@@ -33,8 +33,8 @@
   height: 120px;
   flex-direction: column;
   color: #C23D1C;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-family: "Komika Title",
       Impact,
       Haettenschweiler,
@@ -61,8 +61,8 @@
   position: absolute;
   width: 11px;
   height: 19px;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   text-indent: -9999px;
 }
 

@@ -2,10 +2,21 @@ import featureData from "./features.json";
 const RoadLabelFont = "Komika Title Regular";
 const RoadCasingColor = "#F4CE99";
 const RoadsMinorColor = "#fdf3d7";
+const RoadsMinorCasingWidth = [
+  "interpolate",
+  ["exponential", 1.6],
+  ["zoom"],
+  15,
+  1,
+  16,
+  2,
+];
 const RoadsMinorWidth = [
   "interpolate",
   ["exponential", 1.6],
   ["zoom"],
+  13,
+  5,
   15,
   7,
   17.5,
@@ -29,10 +40,21 @@ const RoadsMajorWidth = [
   "interpolate",
   ["exponential", 1.6],
   ["zoom"],
+  13,
+  9,
   15,
   19,
   18,
   15,
+];
+const RoadsMajorCasingWidth = [
+  "interpolate",
+  ["exponential", 1.6],
+  ["zoom"],
+  15,
+  1,
+  18,
+  2,
 ];
 const BuildingShadowColor = "#F4CE99";
 const RoadsTertiaryColor = "#fdf3d7";
@@ -40,6 +62,8 @@ const RoadsTertiaryWidth = [
   "interpolate",
   ["exponential", 1.6],
   ["zoom"],
+  13,
+  8,
   15,
   15,
   18,
@@ -50,6 +74,8 @@ const RoadsHighwayWidth = [
   "interpolate",
   ["exponential", 1.6],
   ["zoom"],
+  13,
+  14,
   15,
   22,
   18,
@@ -321,15 +347,7 @@ export default {
       paint: {
         "line-color": RoadCasingColor,
         "line-gap-width": RoadsMinorWidth,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          1,
-          16,
-          2,
-        ],
+        "line-width": RoadsMinorCasingWidth,
       },
     },
     {
@@ -398,15 +416,7 @@ export default {
       paint: {
         "line-color": RoadCasingColor,
         "line-gap-width": RoadsTertiaryWidth,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          1,
-          18,
-          2,
-        ],
+        "line-width": RoadsMajorCasingWidth,
       },
     },
     {
@@ -585,37 +595,8 @@ export default {
       filter: ["all", ["has", "is_bridge"], ["==", "kind", "minor_road"]],
       paint: {
         "line-color": RoadCasingColor,
-        "line-gap-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          11,
-          0,
-          12.5,
-          0.5,
-          15,
-          2,
-          18,
-          11,
-        ],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          13,
-          0,
-          13.5,
-          0.8,
-        ],
-        "line-opacity": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          16,
-          0.25,
-          18,
-          1,
-        ],
+        "line-gap-width": RoadsMinorWidth,
+        "line-width": RoadsMinorCasingWidth,
       },
     },
     {
@@ -637,15 +618,7 @@ export default {
       paint: {
         "line-color": RoadCasingColor,
         "line-gap-width": RoadsMajorWidth,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          9,
-          0,
-          9.5,
-          1.5,
-        ],
+        "line-width": RoadsMajorCasingWidth,
       },
     },
     {
@@ -657,28 +630,7 @@ export default {
       filter: ["all", ["has", "is_bridge"], ["==", "kind", "minor_road"]],
       paint: {
         "line-color": RoadsMinorColor,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          11,
-          0,
-          12.5,
-          0.5,
-          15,
-          2,
-          18,
-          11,
-        ],
-        "line-opacity": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          16,
-          0.25,
-          18,
-          1,
-        ],
+        "line-width": RoadsMinorWidth,
       },
     },
     {
@@ -699,15 +651,7 @@ export default {
       ],
       paint: {
         "line-color": RoadsMajorColor,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          20,
-          18,
-          12,
-        ],
+        "line-width": RoadsMajorWidth,
       },
     },
     {
@@ -721,17 +665,10 @@ export default {
         ["==", "kind", "major_road"],
         ["any", ["==", "kind_detail", "tertiary"]],
       ],
+      layout: { "line-cap": "round" },
       paint: {
         "line-color": RoadsTertiaryColor,
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          15,
-          18,
-          12,
-        ],
+        "line-width": RoadsTertiaryWidth,
       },
     },
     {
@@ -2417,7 +2354,7 @@ export default {
       type: "symbol",
       source: "features",
       filter: ["==", "kind", "information"],
-      minzoom: 16.25,
+      minzoom: 15.75,
       layout: {
         "symbol-placement": "point",
         "icon-image": "Information",
@@ -2434,7 +2371,7 @@ export default {
           18,
           0.8,
           20,
-          1.5,
+          1,
         ],
         "symbol-sort-key": 1,
       },
@@ -2460,10 +2397,12 @@ export default {
       source: "features",
       filter: ["==", "kind", "parade-end"],
       layout: {
+        "icon-size": ["interpolate", ["linear", 1], ["zoom"], 13, 0.75, 15, 1],
         "symbol-placement": "point",
         "icon-image": "Parade-End",
         "icon-anchor": "bottom-left",
         "icon-allow-overlap": true,
+        "icon-offset": [-6, 0],
         "symbol-sort-key": 120,
       },
     },
@@ -2472,7 +2411,7 @@ export default {
       type: "symbol",
       source: "features",
       filter: ["==", "kind", "second-stage"],
-      minzoom: 16.25,
+      minzoom: 15.65,
       layout: {
         "symbol-placement": "point",
         "icon-image": "Lemon-Stage",
@@ -2481,14 +2420,12 @@ export default {
         "icon-allow-overlap": true,
         "symbol-sort-key": 100,
       },
-      paint: {
-        "icon-opacity": ["interpolate", ["linear", 1], ["zoom"], 15, 0, 16, 1],
-      },
     },
     {
       id: "main-stage-callout",
       type: "symbol",
       source: "features",
+      minzoom: 15,
       filter: ["==", "kind", "main-stage"],
       layout: {
         "symbol-placement": "point",
@@ -2511,6 +2448,8 @@ export default {
         "symbol-placement": "point",
         "icon-image": "Parade-Banner",
         "icon-anchor": "top-right",
+        "icon-size": ["interpolate", ["linear", 1], ["zoom"], 13, 0.75, 15, 1],
+        "icon-offset": [7, -5],
         "icon-allow-overlap": true,
         "symbol-sort-key": 120,
       },
@@ -2525,12 +2464,19 @@ export default {
         "symbol-placement": "point",
         "icon-image": "Festival-Banner",
         "icon-anchor": "top",
-        "icon-offset": [25, 0],
+        "icon-size": ["interpolate", ["linear", 1], ["zoom"], 13, 0.75, 15, 1],
+
+        "icon-offset": [
+          "interpolate",
+          ["linear", 1],
+          ["zoom"],
+          14,
+          ["literal", [0, -70]],
+          15,
+          ["literal", [50, 0]],
+        ],
         "icon-allow-overlap": true,
         "symbol-sort-key": 120,
-      },
-      paint: {
-        "icon-opacity": ["interpolate", ["linear", 1], ["zoom"], 15, 1],
       },
     },
   ],

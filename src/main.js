@@ -43,7 +43,7 @@ const map = new Map({
     ? festivalBounds
     : paradeBounds,
   maxBounds: maxBounds,
-  minZoom: 15.5,
+  minZoom: 13.5,
   maxZoom: 20,
   attributionControl: false,
 });
@@ -114,4 +114,19 @@ map.on("load", function () {
 
   map.on("click", "restroom", createPopup);
   map.on("click", "parking", createPopup);
+
+  map.on("click", (e) => {
+    const features = map.queryRenderedFeatures(e.point);
+    const displayFeatures = features.map((feature) => {
+      const layer = feature.layer;
+      const displayFeat = {
+        id: layer.id,
+        source: layer.source,
+        sourceLayer: layer["source-layer"],
+        properties: feature.properties,
+      };
+      return displayFeat;
+    });
+    console.log(JSON.stringify(displayFeatures, null, 2));
+  });
 });

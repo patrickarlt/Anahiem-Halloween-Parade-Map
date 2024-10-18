@@ -4,203 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#00fff4",
-        "stroke-width": 5,
-        "stroke-opacity": 0.5,
-        "fill-opacity": 0.1,
-        "kind": "map-max-bounds",
-        "fill": "#00fff4"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ],
-            [
-              -117.94166283493314,
-              33.847150653168
-            ],
-            [
-              -117.94173386667563,
-              33.8336010802066
-            ],
-            [
-              -117.94159180319089,
-              33.81801483485654
-            ],
-            [
-              -117.89390591570934,
-              33.818044333177426
-            ],
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#00ffe7",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "label": "Artists Corner",
-        "group": "artists",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91443695890433,
-            33.83406580170096
-          ],
-          [
-            -117.91432094584636,
-            33.83374043808368
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#77cafb",
-        "stroke-width": 5,
-        "stroke-opacity": 1,
-        "fill": "#8ac6f5",
-        "fill-opacity": 0.1,
-        "kind": "parade-initial-bounds"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ],
-            [
-              -117.90788926682217,
-              33.84170032610531
-            ],
-            [
-              -117.93583791742341,
-              33.83495209689048
-            ],
-            [
-              -117.93166102064399,
-              33.82378091721784
-            ],
-            [
-              -117.90441021288346,
-              33.83075688926327
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#e93ec4",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "group": "crafts",
-        "label": "Crafts",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91412804914185,
-            33.833753801499995
-          ],
-          [
-            -117.91372066062183,
-            33.83384750297195
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#6462f5",
-        "stroke-width": 5,
-        "stroke-opacity": 1,
-        "fill-opacity": 0.1,
-        "kind": "festival-initial-bounds",
-        "fill": "#615fe7"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.9128024,
-              33.8332716
-            ],
-            [
-              -117.913379,
-              33.8351751
-            ],
-            [
-              -117.9134287,
-              33.8353774
-            ],
-            [
-              -117.9184939,
-              33.8341428
-            ],
-            [
-              -117.9179471,
-              33.832132
-            ],
-            [
-              -117.9128024,
-              33.8332716
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#e5ff00",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "group": "city",
-        "label": "City of Anaheim Booths",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91625816191527,
-            33.83369487623257
-          ],
-          [
-            -117.91572365036376,
-            33.83383146116681
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#3b65ed",
         "marker-size": "large",
         "marker-symbol": "toilet",
@@ -214,118 +17,6 @@
           33.83425088790402
         ],
         "type": "Point"
-      },
-      "id": 6
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#00fff4",
-        "stroke-width": 5,
-        "stroke-opacity": 0.5,
-        "fill-opacity": 0.1,
-        "kind": "map-max-bounds",
-        "fill": "#00fff4"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ],
-            [
-              -117.94166283493314,
-              33.847150653168
-            ],
-            [
-              -117.94173386667563,
-              33.8336010802066
-            ],
-            [
-              -117.94159180319089,
-              33.81801483485654
-            ],
-            [
-              -117.89390591570934,
-              33.818044333177426
-            ],
-            [
-              -117.8950779394577,
-              33.84723914417296
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#ff23c9",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "group": "crafts",
-        "label": "Crafts & Non-profits",
-        "icon": "POI"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91769310049473,
-            33.83339269896675
-          ],
-          [
-            -117.9177145471034,
-            33.8334213299586
-          ],
-          [
-            -117.91773117917855,
-            33.83346177688219
-          ],
-          [
-            -117.91773641318493,
-            33.83350703730437
-          ],
-          [
-            -117.91773028558245,
-            33.833540837748416
-          ],
-          [
-            -117.9177152583647,
-            33.8335798947436
-          ],
-          [
-            -117.91769211571234,
-            33.83361153646793
-          ],
-          [
-            -117.9176594716371,
-            33.83364031887227
-          ],
-          [
-            -117.91762114675781,
-            33.83366370835739
-          ],
-          [
-            -117.91758068817072,
-            33.83368219725431
-          ],
-          [
-            -117.91753536032161,
-            33.8336939450075
-          ],
-          [
-            -117.91749170115298,
-            33.83369695958543
-          ],
-          [
-            -117.91744560735417,
-            33.83369255890615
-          ]
-        ],
-        "type": "LineString"
       }
     },
     {
@@ -344,8 +35,7 @@
           33.83412744207335
         ],
         "type": "Point"
-      },
-      "id": 9
+      }
     },
     {
       "type": "Feature",
@@ -363,8 +53,7 @@
           33.834026143983436
         ],
         "type": "Point"
-      },
-      "id": 10
+      }
     },
     {
       "type": "Feature",
@@ -382,8 +71,7 @@
           33.83276213631761
         ],
         "type": "Point"
-      },
-      "id": 11
+      }
     },
     {
       "type": "Feature",
@@ -401,8 +89,7 @@
           33.83438826334914
         ],
         "type": "Point"
-      },
-      "id": 12
+      }
     },
     {
       "type": "Feature",
@@ -420,8 +107,7 @@
           33.836108935911966
         ],
         "type": "Point"
-      },
-      "id": 13
+      }
     },
     {
       "type": "Feature",
@@ -439,8 +125,7 @@
           33.83366094332308
         ],
         "type": "Point"
-      },
-      "id": 14
+      }
     },
     {
       "type": "Feature",
@@ -458,8 +143,7 @@
           33.834468394784096
         ],
         "type": "Point"
-      },
-      "id": 15
+      }
     },
     {
       "type": "Feature",
@@ -477,124 +161,6 @@
           33.833258520010986
         ],
         "type": "Point"
-      },
-      "id": 16
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "muzeo",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "museum",
-        "label": "Muzeo"
-      },
-      "geometry": {
-        "coordinates": [
-          -117.91364046129274,
-          33.83359162202994
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#ff000d",
-        "marker-size": "large",
-        "marker-symbol": "hospital",
-        "kind": "first-aid",
-        "label": "First Aid"
-      },
-      "geometry": {
-        "coordinates": [
-          -117.91541735869417,
-          33.83363442066597
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#0069ff",
-        "marker-size": "large",
-        "marker-symbol": "drinking-water",
-        "kind": "water",
-        "label": "Water Station"
-      },
-      "geometry": {
-        "coordinates": [
-          -117.91721611885377,
-          33.83344921022854
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#3b65ed",
-        "marker-size": "large",
-        "marker-symbol": "drinking-water",
-        "kind": "water",
-        "label": "Water Station"
-      },
-      "geometry": {
-        "coordinates": [
-          -117.91561320686048,
-          33.83385230385541
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#adf67a",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "group": "food",
-        "label": "Restaurants and Shops on Center Steet Promenade",
-        "icon": "Food"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91639803067169,
-            33.833835570242144
-          ],
-          [
-            -117.91574998745807,
-            33.83399070952781
-          ]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "kind": "text-label",
-        "stroke": "#00ff4b",
-        "stroke-width": 20,
-        "stroke-opacity": 1,
-        "label": "Restaurants on Center Steet Promenade",
-        "icon": "Food"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            -117.91522486928099,
-            33.8341155412389
-          ],
-          [
-            -117.91458391169954,
-            33.83425683544576
-          ]
-        ],
-        "type": "LineString"
       }
     },
     {
@@ -729,8 +295,7 @@
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 23
+      }
     },
     {
       "type": "Feature",
@@ -788,8 +353,508 @@
           ]
         ],
         "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "stage",
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5
       },
-      "id": 24
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.91706,
+              33.8339121
+            ],
+            [
+              -117.9169603,
+              33.8338343
+            ],
+            [
+              -117.9171298,
+              33.8336802
+            ],
+            [
+              -117.9172215,
+              33.8337614
+            ],
+            [
+              -117.91706,
+              33.8339121
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "stage",
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.9157025,
+              33.8343966
+            ],
+            [
+              -117.915553,
+              33.8344248
+            ],
+            [
+              -117.9155171,
+              33.8343569
+            ],
+            [
+              -117.9156726,
+              33.8343287
+            ],
+            [
+              -117.9157025,
+              33.8343966
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#00fff4",
+        "stroke-width": 5,
+        "stroke-opacity": 0.5,
+        "fill-opacity": 0.1,
+        "kind": "map-max-bounds",
+        "fill": "#00fff4"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ],
+            [
+              -117.94166283493314,
+              33.847150653168
+            ],
+            [
+              -117.94173386667563,
+              33.8336010802066
+            ],
+            [
+              -117.94159180319089,
+              33.81801483485654
+            ],
+            [
+              -117.89390591570934,
+              33.818044333177426
+            ],
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#00ffe7",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "label": "Artists Corner",
+        "group": "artists",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91443695890433,
+            33.83406580170096
+          ],
+          [
+            -117.91432094584636,
+            33.83374043808368
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#77cafb",
+        "stroke-width": 5,
+        "stroke-opacity": 1,
+        "fill": "#8ac6f5",
+        "fill-opacity": 0.1,
+        "kind": "parade-initial-bounds"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.91074143747389,
+              33.83003673847311
+            ],
+            [
+              -117.9133010189621,
+              33.83799086986636
+            ],
+            [
+              -117.92999269969913,
+              33.83421015948732
+            ],
+            [
+              -117.92723441755882,
+              33.82613792345851
+            ],
+            [
+              -117.91074143747389,
+              33.83003673847311
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#e93ec4",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "crafts",
+        "label": "Crafts",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91412804914185,
+            33.833753801499995
+          ],
+          [
+            -117.91372066062183,
+            33.83384750297195
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#6462f5",
+        "stroke-width": 5,
+        "stroke-opacity": 1,
+        "fill-opacity": 0.1,
+        "kind": "festival-initial-bounds",
+        "fill": "#615fe7"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.9128024,
+              33.8332716
+            ],
+            [
+              -117.913379,
+              33.8351751
+            ],
+            [
+              -117.9134287,
+              33.8353774
+            ],
+            [
+              -117.9184939,
+              33.8341428
+            ],
+            [
+              -117.9179471,
+              33.832132
+            ],
+            [
+              -117.9128024,
+              33.8332716
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#e5ff00",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "city",
+        "label": "City of Anaheim Booths",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91625816191527,
+            33.83369487623257
+          ],
+          [
+            -117.91572365036376,
+            33.83383146116681
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#00fff4",
+        "stroke-width": 5,
+        "stroke-opacity": 0.5,
+        "fill-opacity": 0.1,
+        "kind": "map-max-bounds",
+        "fill": "#00fff4"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ],
+            [
+              -117.94166283493314,
+              33.847150653168
+            ],
+            [
+              -117.94173386667563,
+              33.8336010802066
+            ],
+            [
+              -117.94159180319089,
+              33.81801483485654
+            ],
+            [
+              -117.89390591570934,
+              33.818044333177426
+            ],
+            [
+              -117.8950779394577,
+              33.84723914417296
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#ff23c9",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "crafts",
+        "label": "Crafts & Non-profits",
+        "icon": "POI"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91769310049473,
+            33.83339269896675
+          ],
+          [
+            -117.9177145471034,
+            33.8334213299586
+          ],
+          [
+            -117.91773117917855,
+            33.83346177688219
+          ],
+          [
+            -117.91773641318493,
+            33.83350703730437
+          ],
+          [
+            -117.91773028558245,
+            33.833540837748416
+          ],
+          [
+            -117.9177152583647,
+            33.8335798947436
+          ],
+          [
+            -117.91769211571234,
+            33.83361153646793
+          ],
+          [
+            -117.9176594716371,
+            33.83364031887227
+          ],
+          [
+            -117.91762114675781,
+            33.83366370835739
+          ],
+          [
+            -117.91758068817072,
+            33.83368219725431
+          ],
+          [
+            -117.91753536032161,
+            33.8336939450075
+          ],
+          [
+            -117.91749170115298,
+            33.83369695958543
+          ],
+          [
+            -117.91744560735417,
+            33.83369255890615
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "muzeo",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "label": "Muzeo"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91364046129274,
+          33.83359162202994
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ff000d",
+        "marker-size": "large",
+        "marker-symbol": "hospital",
+        "kind": "first-aid",
+        "label": "First Aid"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91541735869417,
+          33.83363442066597
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#0069ff",
+        "marker-size": "large",
+        "marker-symbol": "drinking-water",
+        "kind": "water",
+        "label": "Water Station"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91721611885377,
+          33.83344921022854
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#3b65ed",
+        "marker-size": "large",
+        "marker-symbol": "drinking-water",
+        "kind": "water",
+        "label": "Water Station"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.91561320686048,
+          33.83385230385541
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#adf67a",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "group": "food",
+        "label": "Restaurants and Shops on Center Steet Promenade",
+        "icon": "Food"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91639803067169,
+            33.833835570242144
+          ],
+          [
+            -117.91574998745807,
+            33.83399070952781
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "kind": "text-label",
+        "stroke": "#00ff4b",
+        "stroke-width": 20,
+        "stroke-opacity": 1,
+        "label": "Restaurants on Center Steet Promenade",
+        "icon": "Food"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.91522486928099,
+            33.8341155412389
+          ],
+          [
+            -117.91458391169954,
+            33.83425683544576
+          ]
+        ],
+        "type": "LineString"
+      }
     },
     {
       "type": "Feature",
@@ -1253,12 +1318,12 @@
             33.830978
           ],
           [
-            -117.9279187,
-            33.8299138
+            -117.92479505047825,
+            33.83063437672446
           ],
           [
-            -117.9286377,
-            33.8297474
+            -117.9280736483764,
+            33.8298787373422
           ]
         ],
         "type": "LineString"
@@ -1290,88 +1355,10 @@
       },
       "geometry": {
         "coordinates": [
-          -117.9286351,
-          33.8297431
+          -117.92805822902123,
+          33.8298815366349
         ],
         "type": "Point"
-      }
-    },
-    {
-      "id": 39,
-      "type": "Feature",
-      "properties": {
-        "kind": "stage",
-        "stroke": "#555555",
-        "stroke-width": 2,
-        "stroke-opacity": 1,
-        "fill": "#555555",
-        "fill-opacity": 0.5
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.91706,
-              33.8339121
-            ],
-            [
-              -117.9169603,
-              33.8338343
-            ],
-            [
-              -117.9171298,
-              33.8336802
-            ],
-            [
-              -117.9172215,
-              33.8337614
-            ],
-            [
-              -117.91706,
-              33.8339121
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "id": 40,
-      "type": "Feature",
-      "properties": {
-        "kind": "stage",
-        "stroke": "#555555",
-        "stroke-width": 2,
-        "stroke-opacity": 1,
-        "fill": "#555555",
-        "fill-opacity": 0.5
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.9157025,
-              33.8343966
-            ],
-            [
-              -117.915553,
-              33.8344248
-            ],
-            [
-              -117.9155171,
-              33.8343569
-            ],
-            [
-              -117.9156726,
-              33.8343287
-            ],
-            [
-              -117.9157025,
-              33.8343966
-            ]
-          ]
-        ],
-        "type": "Polygon"
       }
     }
   ]
