@@ -50,6 +50,10 @@
   text-shadow: 0 0 0 #FDCF56;
 }
 
+.maplibregl-ctrl button:not(:disabled):hover {
+  background: #FDCF56;
+}
+
 .maplibregl-ctrl-group button+button {
   border-top: 2px solid #FFC023;
 }
