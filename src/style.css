@@ -29,7 +29,7 @@
 .ahp-zoom-to {
   margin: 10px 0 0 10px;
   color: #C23D1C;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   font-family: "Komika Title",
     Impact,
@@ -39,7 +39,7 @@
 }
 
 .ahp-zoom-to .maplibregl-ctrl-group {
-  padding: 0.25rem 0.5rem;
+  padding: 0.325rem 0.65rem;
   
 }
 

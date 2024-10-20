@@ -38,12 +38,12 @@ const map = new Map({
   container: "map",
   style: mapStyle,
   bounds: !area
-    ? festivalBounds
+    ? paradeBounds
     : area === "festival"
     ? festivalBounds
     : paradeBounds,
   maxBounds: maxBounds,
-  minZoom: 13.5,
+  minZoom: 13,
   maxZoom: 20,
   attributionControl: false,
 });
