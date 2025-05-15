@@ -5,7 +5,7 @@ import {
   NavigationControl,
   FullscreenControl,
   GeolocateControl,
-  Popup,
+  // Popup,
 } from "maplibre-gl";
 import { Protocol } from "pmtiles";
 import { bbox as findBoundingBox } from "@turf/turf";
@@ -56,7 +56,7 @@ const map = new Map({
   attributionControl: false,
 });
 
-// map.scrollZoom.disable();
+map.scrollZoom.disable();
 
 map.addControl(
   new NavigationControl({
@@ -92,9 +92,9 @@ map.on("load", function () {
     document.getElementById("attribution").style.opacity = "0";
   });
 
-  map.on("moveend", () => {
-    popup.remove();
-  });
+  // map.on("moveend", () => {
+  //   popup.remove();
+  // });
 
   map.on("zoomend", function () {
     const zoom = map.getZoom();
