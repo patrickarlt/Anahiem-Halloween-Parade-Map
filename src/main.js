@@ -62,7 +62,7 @@ map.addControl(
   new NavigationControl({
     showCompass: false,
   }),
-  "top-right"
+  "top-left"
 );
 
 map.addControl(new FullscreenControl(), "bottom-left");
@@ -73,7 +73,7 @@ map.addControl(
     },
     trackUserLocation: true,
   }),
-  "top-right"
+  "top-left"
 );
 
 // window.__AHP_DEBUG__ = {};
