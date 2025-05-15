@@ -1,121 +1,142 @@
 {
+  "Close-Button": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 24,
+    "x": 438,
+    "y": 240
+  },
   "Close_Button": {
     "height": 38,
     "pixelRatio": 2,
     "width": 22,
-    "x": 956,
-    "y": 92
+    "x": 438,
+    "y": 280
   },
   "Festival-Banner": {
-    "height": 122,
+    "height": 350,
     "pixelRatio": 2,
-    "width": 386,
-    "x": 308,
-    "y": 462
+    "width": 438,
+    "x": 0,
+    "y": 0
   },
   "First Aid": {
     "height": 82,
     "pixelRatio": 2,
     "width": 78,
-    "x": 784,
-    "y": 462
+    "x": 308,
+    "y": 828
   },
   "First-Aid": {
     "height": 82,
     "pixelRatio": 2,
     "width": 78,
-    "x": 694,
-    "y": 540
+    "x": 308,
+    "y": 910
   },
   "Food": {
-    "height": 92,
+    "height": 94,
     "pixelRatio": 2,
-    "width": 90,
-    "x": 878,
-    "y": 158
+    "width": 92,
+    "x": 468,
+    "y": 398
   },
   "Information": {
     "height": 158,
     "pixelRatio": 2,
     "width": 94,
-    "x": 862,
-    "y": 0
+    "x": 468,
+    "y": 240
   },
   "Lemon-Stage": {
     "height": 226,
     "pixelRatio": 2,
     "width": 412,
-    "x": 466,
-    "y": 236
+    "x": 396,
+    "y": 592
   },
   "Main-Stage": {
     "height": 236,
     "pixelRatio": 2,
     "width": 396,
-    "x": 466,
-    "y": 0
+    "x": 0,
+    "y": 592
   },
   "Museum": {
-    "height": 92,
+    "height": 94,
     "pixelRatio": 2,
-    "width": 90,
-    "x": 878,
-    "y": 250
+    "width": 92,
+    "x": 468,
+    "y": 492
   },
   "POI": {
-    "height": 92,
+    "height": 94,
     "pixelRatio": 2,
-    "width": 90,
-    "x": 878,
-    "y": 342
+    "width": 92,
+    "x": 560,
+    "y": 398
   },
   "Parade-Banner": {
     "height": 194,
     "pixelRatio": 2,
     "width": 408,
-    "x": 0,
-    "y": 240
+    "x": 804,
+    "y": 818
   },
   "Parade-End": {
-    "height": 194,
+    "height": 196,
     "pixelRatio": 2,
     "width": 308,
     "x": 0,
-    "y": 434
+    "y": 828
+  },
+  "Parade-Start": {
+    "height": 196,
+    "pixelRatio": 2,
+    "width": 408,
+    "x": 396,
+    "y": 818
   },
   "Parking": {
-    "height": 78,
+    "height": 80,
     "pixelRatio": 2,
-    "width": 90,
-    "x": 694,
-    "y": 462
+    "width": 92,
+    "x": 562,
+    "y": 240
+  },
+  "Popup-Background": {
+    "height": 242,
+    "pixelRatio": 2,
+    "width": 468,
+    "x": 0,
+    "y": 350
   },
   "Popup_Background": {
     "height": 240,
     "pixelRatio": 2,
     "width": 466,
-    "x": 0,
+    "x": 438,
     "y": 0
   },
   "Restroom": {
     "height": 78,
     "pixelRatio": 2,
     "width": 78,
-    "x": 862,
-    "y": 526
+    "x": 562,
+    "y": 320
   },
   "Town-Hall": {
-    "height": 92,
+    "height": 94,
     "pixelRatio": 2,
-    "width": 90,
-    "x": 878,
-    "y": 434
+    "width": 92,
+    "x": 560,
+    "y": 492
   },
   "Water": {
     "height": 92,
     "pixelRatio": 2,
     "width": 68,
-    "x": 956,
-    "y": 0
+    "x": 652,
+    "y": 320
   }
 }

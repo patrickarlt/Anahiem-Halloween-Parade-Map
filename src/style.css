@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 #map-wrapper {
-  font-family: "Komika Title",
-      Impact,
-      Haettenschweiler,
-      "Arial Narrow Bold",
-      sans-serif;
+  font-family: sans-serif;
 }
 
 #map {
@@ -15,51 +11,33 @@
 }
 
 #attribution {
-  @apply transition-opacity duration-300 absolute bottom-0 right-0 text-xs italic bg-[#FFFCE1] p-1 border border-t border-r border-[#F4CE99] text-[#B17048];
+  @apply transition-opacity duration-300 absolute bottom-0 right-0 text-[.625rem] bg-[#F9F0D3] p-1 border border-t border-r border-[#eea61f] text-[#703b17];
 }
 
-@font-face {
-  font-family: "Komika Title";
-  src: url('./web-fonts/komtit__-webfont.woff2') format('woff2'),
-    url('./web-fonts/komtit__-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.ahp-zoom-to {
-  margin: 10px 0 0 10px;
-  color: #C23D1C;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  font-family: "Komika Title",
-    Impact,
-    Haettenschweiler,
-    "Arial Narrow Bold",
-    sans-serif;
-}
-
-.ahp-zoom-to .maplibregl-ctrl-group {
-  padding: 0.325rem 0.65rem;
-  
+:root {
+  --maplibregl-ctrl-bg: #f9f0d3;
+  --maplibregl-ctrl-border-color: #eea61f;
+  --maplibregl-ctrl-text-color: #703b17;
+  --maplibregl-ctrl-text-shadow: 0 0 0 var(--maplibregl-ctrl-bg);
 }
 
 .maplibregl-ctrl-group {
-  background: #FED777;
-  border: 2px solid #FFC023;
+  background: var(--maplibregl-ctrl-bg);
+  border: 2px solid var(--maplibregl-ctrl-border-color);
   border-radius: 0;
-  text-shadow: 0 0 0 #FDCF56;
+  text-shadow: var(--maplibregl-ctrl-text-shadow);
 }
 
 .maplibregl-ctrl button:not(:disabled):hover {
-  background: #FDCF56;
+  background: #fdcf56;
 }
 
-.maplibregl-ctrl-group button+button {
-  border-top: 2px solid #FFC023;
+.maplibregl-ctrl-group button + button {
+  border-top: 2px solid var(--maplibregl-ctrl-border-color);
 }
 
 .maplibregl-ctrl-group:not(:empty) {
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, .2);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .ahp-popup {
@@ -68,19 +46,16 @@
   width: 233px;
   height: 120px;
   flex-direction: column;
-  color: #C23D1C;
+  color: var(--maplibregl-ctrl-text-color);
   font-size: 1rem;
   line-height: 1.25rem;
-  font-family: "Komika Title",
-      Impact,
-      Haettenschweiler,
-      "Arial Narrow Bold",
-      sans-serif;
+  font-family: "Komika Title", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
 }
 
 .ahp-popup .maplibregl-popup-content {
   display: grid;
-    place-items: center;
+  place-items: center;
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -104,5 +79,4 @@
 
 .maplibregl-popup-tip {
   display: none;
-  
 }

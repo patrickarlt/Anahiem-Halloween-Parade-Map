@@ -1,5 +1,6 @@
-import featureData from "./features.json";
-const RoadLabelFont = "Komika Title Regular";
+import featureData from "./features-2025.json";
+
+const RoadLabelFont = "Museo Sans 700";
 const RoadCasingColor = "#F4CE99";
 const RoadsMinorColor = "#fdf3d7";
 const RoadsMinorCasingWidth = [
@@ -41,11 +42,20 @@ const RoadsMajorWidth = [
   ["exponential", 1.6],
   ["zoom"],
   13,
-  9,
+  8,
   15,
-  19,
+  14,
   18,
+  14,
+];
+const RoadMajorLabelSize = [
+  "interpolate",
+  ["exponential", 1.6],
+  ["zoom"],
   15,
+  12,
+  18,
+  11,
 ];
 const RoadsMajorCasingWidth = [
   "interpolate",
@@ -96,21 +106,34 @@ const PoiTextSize = [
   ["exponential", 1.6],
   ["zoom"],
   15,
+  15,
   18,
   18,
   20,
-  20,
-  28,
+  22,
 ];
 
-const PoiIconSize = [
+const PoiIconSize = ["interpolate", ["linear", 1], ["zoom"], 17, 0.75, 20, 1.0];
+const AreaColor = "#E97424";
+
+const RoadsMinorLabelSize = 10;
+const RoadsTertiaryLabelSize = [
   "interpolate",
-  ["linear", 1],
+  ["exponential", 1.6],
   ["zoom"],
-  17,
-  0.75,
-  20,
-  0.85,
+  15,
+  11,
+  18,
+  10,
+];
+const RoadsHighwayLabelSize = [
+  "interpolate",
+  ["exponential", 1.6],
+  ["zoom"],
+  15,
+  18,
+  18,
+  13,
 ];
 export default {
   version: 8,
@@ -196,72 +219,70 @@ export default {
       paint: { "fill-color": "#e4ded7", "fill-opacity": 0.5 },
     },
 
+    /**
+     * Area Outlines
+     */
     {
       id: "festival-area",
       type: "fill",
       source: "features",
-      filter: ["==", "kind", "festival-outline"],
+      filter: [
+        "any",
+        ["==", "kind", "festival-outline"],
+        ["==", "kind", "downtown-area"],
+      ],
       layout: {},
       paint: {
-        // "fill-color": "#FED777",
+        "fill-color": AreaColor,
         "fill-color": [
           "interpolate",
           ["exponential", 2],
           ["zoom"],
           15,
-          "#FFC023",
+          AreaColor,
           17,
-          "#FED777",
+          LandColor,
         ],
         "fill-opacity": [
           "interpolate",
           ["linear", 1],
           ["zoom"],
           15,
-          0.65,
+          0.85,
           18,
-          0.15,
+          0,
         ],
       },
     },
-    {
-      id: "stages",
-      type: "fill",
-      source: "features",
-      filter: ["==", "kind", "stage"],
-      layout: {},
-      paint: {
-        // "fill-color": "#FFC023",
-        "fill-color": [
-          "interpolate",
-          ["exponential", 2],
-          ["zoom"],
-          15,
-          "#FFC023",
-          18,
-          "#FED777",
-        ],
-      },
-    },
-    {
-      id: "stages-outline",
-      type: "line",
-      source: "features",
-      filter: ["==", "kind", "stage"],
-      layout: {},
-      paint: {
-        "line-color": [
-          "interpolate",
-          ["exponential", 2],
-          ["zoom"],
-          15,
-          "#FFC023",
-          17,
-          "#FED777",
-        ],
-        "line-width": 3,
-      },
-    },
+    // {
+    //   id: "festival-area-outline",
+    //   type: "line",
+    //   source: "features",
+    //   filter: ["==", "kind", "festival-outline"],
+    //   layout: {},
+    //   paint: {
+    //     "line-color": [
+    //       "interpolate",
+    //       ["exponential", 2],
+    //       ["zoom"],
+    //       15,
+    //       areaColor,
+    //       17,
+    //       "#FED777",
+    //     ],
+    //     "line-opacity": [
+    //       "interpolate",
+    //       ["linear", 1],
+    //       ["zoom"],
+    //       15,
+    //       1,
+    //       18,
+    //       0.5,
+    //     ],
+    //     "line-width": ["interpolate", ["linear", 1], ["zoom"], 15, 4, 18, 2],
+    //   },
+    // },
+
     /**
      * Buildings
      */
@@ -328,6 +349,7 @@ export default {
         ],
       },
     },
+
     /**
      * Road Casings
      */
@@ -740,6 +762,24 @@ export default {
       },
     },
     /**
+     * Walking Routes
+     */
+    {
+      id: "walking_routes",
+      type: "line",
+      source: "features",
+      filter: ["==", "kind", "walking-route"],
+      layout: {
+        "line-join": "round",
+        "line-cap": "round",
+      },
+      paint: {
+        "line-color": "#FF7602",
+        "line-dasharray": [1, 3],
+        "line-width": 2,
+      },
+    },
+    /**
      * Parade Route
      */
     {
@@ -758,11 +798,9 @@ export default {
           ["exponential", 1.6],
           ["zoom"],
           15,
-          10,
-          17,
-          7,
-          18,
           6,
+          18,
+          4,
         ],
         "line-opacity": [
           "interpolate",
@@ -771,7 +809,7 @@ export default {
           15,
           1,
           18,
-          0,
+          1,
         ],
       },
     },
@@ -791,9 +829,7 @@ export default {
           ["exponential", 1.6],
           ["zoom"],
           15,
-          10,
-          17,
-          7,
+          8,
           18,
           6,
         ],
@@ -816,38 +852,6 @@ export default {
           1,
           18,
           0,
-        ],
-      },
-    },
-    {
-      id: "parade_route_dashed",
-      type: "line",
-      source: "features",
-      filter: ["==", "kind", "parade-route"],
-      layout: {
-        "line-join": "round",
-        "line-cap": "round",
-      },
-      paint: {
-        "line-color": "#FF7602",
-        "line-dasharray": [1, 2],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          10,
-          18,
-          6,
-        ],
-        "line-opacity": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          0,
-          18,
-          1,
         ],
       },
     },
@@ -884,7 +888,6 @@ export default {
       layout: {
         "symbol-placement": "line",
         "text-font": [RoadLabelFont],
-
         "text-field": [
           "case",
           [
@@ -1169,7 +1172,7 @@ export default {
             ],
           ],
         ],
-        "text-size": 12,
+        "text-size": RoadsMinorLabelSize,
         "symbol-spacing": [
           "interpolate",
           ["linear", 1],
@@ -1486,15 +1489,7 @@ export default {
             ],
           ],
         ],
-        "text-size": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          14,
-          18,
-          13,
-        ],
+        "text-size": RoadsTertiaryLabelSize,
       },
       paint: {
         "text-color": "#B17048",
@@ -1811,15 +1806,7 @@ export default {
             ],
           ],
         ],
-        "text-size": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          17,
-          18,
-          15,
-        ],
+        "text-size": RoadMajorLabelSize,
       },
       paint: {
         "text-color": "#B17048",
@@ -2122,15 +2109,7 @@ export default {
             ],
           ],
         ],
-        "text-size": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          15,
-          22,
-          18,
-          14,
-        ],
+        "text-size": RoadsHighwayLabelSize,
         "text-offset": [
           "interpolate",
           ["linear", 1],
@@ -2147,6 +2126,33 @@ export default {
       },
     },
     {
+      id: "walking_route_label",
+      type: "symbol",
+      source: "features",
+      filter: ["==", "kind", "walking-route"],
+      layout: {
+        "symbol-placement": "line",
+        "text-allow-overlap": false,
+        "symbol-spacing": 175,
+        "text-field": "{label}",
+        "text-font": ["HeroSandwichPro Bold"],
+        "text-size": [
+          "interpolate",
+          ["exponential", 1.6],
+          ["zoom"],
+          15,
+          18,
+          18,
+          14,
+        ],
+      },
+      paint: {
+        "text-color": "#FF7602",
+        "text-halo-color": RoadsMajorColor,
+        "text-halo-width": 2,
+      },
+    },
+    {
       id: "parade_route_label",
       type: "symbol",
       source: "features",
@@ -2159,11 +2165,11 @@ export default {
           ["linear", 1],
           ["zoom"],
           15,
-          250,
+          150,
           17,
-          450,
+          300,
           20,
-          600,
+          450,
         ],
         "text-field": "{label}",
         "text-font": ["Chickweed Titling Regular"],
@@ -2203,7 +2209,7 @@ export default {
         "text-anchor": "top",
         "text-radial-offset": 1,
         "text-justify": "auto",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
         "icon-size": PoiIconSize,
       },
@@ -2232,7 +2238,7 @@ export default {
         "text-anchor": "top",
         "text-radial-offset": 1,
         "text-justify": "auto",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
         "icon-size": PoiIconSize,
       },
@@ -2253,13 +2259,13 @@ export default {
         "icon-anchor": "bottom",
         "text-anchor": "top",
         "text-field": "{label}",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
         "icon-size": PoiIconSize,
       },
       paint: {
-        "text-color": "#DF4722",
-        "text-halo-color": "#FDDD91",
+        "text-color": "#703B17",
+        "text-halo-color": "#F9F0D3",
         "text-halo-width": 3,
       },
     },
@@ -2274,13 +2280,13 @@ export default {
         "icon-anchor": "bottom",
         "text-anchor": "top",
         "text-field": "{label}",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
         "icon-size": PoiIconSize,
       },
       paint: {
-        "text-color": "#DF4722",
-        "text-halo-color": "#FDDD91",
+        "text-color": "#703B17",
+        "text-halo-color": "#F9F0D3",
         "text-halo-width": 3,
       },
     },
@@ -2295,13 +2301,13 @@ export default {
         "icon-anchor": "bottom",
         "text-anchor": "top",
         "text-field": "{label}",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
         "icon-size": PoiIconSize,
       },
       paint: {
-        "text-color": "#DF4722",
-        "text-halo-color": "#FDDD91",
+        "text-color": "#703B17",
+        "text-halo-color": "#F9F0D3",
         "text-halo-width": 3,
       },
     },
@@ -2340,12 +2346,12 @@ export default {
         "icon-offset": [0, -40],
         "icon-size": PoiIconSize,
         "text-field": "{label}",
-        "text-font": ["Chickweed Titling Regular"],
+        "text-font": ["HeroSandwichPro Bold"],
         "text-size": PoiTextSize,
       },
       paint: {
-        "text-color": "#DF4722",
-        "text-halo-color": "#FDDD91",
+        "text-color": "#703B17",
+        "text-halo-color": "#F9F0D3",
         "text-halo-width": 3,
       },
     },
@@ -2446,7 +2452,7 @@ export default {
       filter: ["==", "kind", "parade-start"],
       layout: {
         "symbol-placement": "point",
-        "icon-image": "Parade-Banner",
+        "icon-image": "Parade-Start",
         "icon-anchor": "top-right",
         "icon-size": ["interpolate", ["linear", 1], ["zoom"], 13, 0.75, 15, 1],
         "icon-offset": [7, -5],
@@ -2458,23 +2464,13 @@ export default {
       id: "festival-callout",
       type: "symbol",
       source: "features",
-      maxzoom: 16,
-      filter: ["==", "kind", "festival-center"],
+      filter: ["==", "kind", "festival"],
       layout: {
         "symbol-placement": "point",
         "icon-image": "Festival-Banner",
-        "icon-anchor": "top",
+        "icon-anchor": "bottom",
         "icon-size": ["interpolate", ["linear", 1], ["zoom"], 13, 0.75, 15, 1],
-
-        "icon-offset": [
-          "interpolate",
-          ["linear", 1],
-          ["zoom"],
-          14,
-          ["literal", [0, -70]],
-          15,
-          ["literal", [50, 0]],
-        ],
+        "icon-offset": [-10, 15],
         "icon-allow-overlap": true,
         "symbol-sort-key": 120,
       },

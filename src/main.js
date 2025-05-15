@@ -9,7 +9,7 @@ import {
 } from "maplibre-gl";
 import { Protocol } from "pmtiles";
 import { bbox as findBoundingBox } from "@turf/turf";
-import featureData from "./map/features.json";
+import boundsData from "./map/bounds.json";
 
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./style.css";
@@ -20,7 +20,10 @@ let protocol = new Protocol();
 addProtocol("pmtiles", protocol.tile);
 
 function boundsForFeature(kind) {
-  const feature = featureData.features.find((f) => f.properties.kind === kind);
+  const feature = boundsData.features.find((f) => f.properties.kind === kind);
+  if (!feature) {
+    return boundsForFeature("map-max-bounds");
+  }
   const bbox = findBoundingBox(feature);
   return new LngLatBounds([
     [bbox[0], bbox[1]],
@@ -30,25 +33,30 @@ function boundsForFeature(kind) {
 
 const festivalBounds = boundsForFeature("festival-initial-bounds");
 const paradeBounds = boundsForFeature("parade-initial-bounds");
+const mapInitalBounds = boundsForFeature("map-initial-bounds");
 const maxBounds = boundsForFeature("map-max-bounds");
 const urlParams = new URLSearchParams(window.location.search);
 const area = urlParams.get("area");
 
+let bounds = mapInitalBounds;
+if (area === "festival") {
+  bounds = festivalBounds;
+}
+if (area === "parade") {
+  bounds = paradeBounds;
+}
+
 const map = new Map({
   container: "map",
   style: mapStyle,
-  bounds: !area
-    ? paradeBounds
-    : area === "festival"
-    ? festivalBounds
-    : paradeBounds,
+  bounds: bounds,
   maxBounds: maxBounds,
   minZoom: 13,
   maxZoom: 20,
   attributionControl: false,
 });
 
-map.scrollZoom.disable();
+// map.scrollZoom.disable();
 
 map.addControl(
   new NavigationControl({
@@ -58,15 +66,15 @@ map.addControl(
 );
 
 map.addControl(new FullscreenControl(), "bottom-left");
-// map.addControl(
-//   new GeolocateControl({
-//     positionOptions: {
-//       enableHighAccuracy: true,
-//     },
-//     trackUserLocation: true,
-//   }),
-//   "top-right"
-// );
+map.addControl(
+  new GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true,
+    },
+    trackUserLocation: true,
+  }),
+  "top-right"
+);
 
 window.__AHP_DEBUG__ = {};
 window.__AHP_DEBUG__.map = map;
@@ -130,33 +138,3 @@ map.on("load", function () {
     console.log(JSON.stringify(displayFeatures, null, 2));
   });
 });
-
-class ZoomToControl {
-  onAdd(map) {
-    this._map = map;
-    this._container = document.createElement("div");
-    this._container.className = "maplibregl-ctrl ahp-zoom-to";
-    this._container.innerHTML = `
-      <button id="zoom-to-festival" class="maplibregl-ctrl-group">Zoom to Festival</button>
-      <button id="zoom-to-parade" class="maplibregl-ctrl-group">Zoom to Parade</button>
-    `;
-    this._container
-      .querySelector("#zoom-to-festival")
-      .addEventListener("click", () => {
-        map.fitBounds(festivalBounds, { padding: 10 });
-      });
-    this._container
-      .querySelector("#zoom-to-parade")
-      .addEventListener("click", () => {
-        map.fitBounds(paradeBounds, { padding: 10 });
-      });
-    return this._container;
-  }
-
-  onRemove() {
-    this._container.parentNode.removeChild(this._container);
-    this._map = undefined;
-  }
-}
-
-map.addControl(new ZoomToControl(), "top-left");
