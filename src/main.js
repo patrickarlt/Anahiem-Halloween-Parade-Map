@@ -76,16 +76,16 @@ map.addControl(
   "top-right"
 );
 
-window.__AHP_DEBUG__ = {};
-window.__AHP_DEBUG__.map = map;
+// window.__AHP_DEBUG__ = {};
+// window.__AHP_DEBUG__.map = map;
 
-const popup = new Popup({
-  anchor: "bottom",
-  className: "ahp-popup",
-  closeOnClick: true,
-  closeOnMove: true,
-  offset: [7, 0],
-});
+// const popup = new Popup({
+//   anchor: "bottom",
+//   className: "ahp-popup",
+//   closeOnClick: true,
+//   closeOnMove: true,
+//   offset: [7, 0],
+// });
 
 map.on("load", function () {
   map.once("movestart", () => {
@@ -101,40 +101,40 @@ map.on("load", function () {
     console.log("Zoom: ", zoom);
   });
 
-  function createPopup(e) {
-    const features = map.queryRenderedFeatures(e.point);
-    const feature = features.find((f) => f.properties.note);
-    console.log(feature);
-    if (feature) {
-      const coordinates = feature.geometry.coordinates.slice();
-      const description = feature.properties.note;
+  // function createPopup(e) {
+  //   const features = map.queryRenderedFeatures(e.point);
+  //   const feature = features.find((f) => f.properties.note);
+  //   console.log(feature);
+  //   if (feature) {
+  //     const coordinates = feature.geometry.coordinates.slice();
+  //     const description = feature.properties.note;
 
-      // Ensure that if the map is zoomed out such that multiple
-      // copies of the feature are visible, the popup appears
-      // over the copy being pointed to.
-      while (Math.abs(e.lngLat - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat > coordinates[0] ? 360 : -360;
-      }
+  //     // Ensure that if the map is zoomed out such that multiple
+  //     // copies of the feature are visible, the popup appears
+  //     // over the copy being pointed to.
+  //     while (Math.abs(e.lngLat - coordinates[0]) > 180) {
+  //       coordinates[0] += e.lngLat > coordinates[0] ? 360 : -360;
+  //     }
 
-      popup.setLngLat(coordinates).setHTML(description).addTo(map);
-    }
-  }
+  //     popup.setLngLat(coordinates).setHTML(description).addTo(map);
+  //   }
+  // }
 
-  map.on("click", "restroom", createPopup);
-  map.on("click", "parking", createPopup);
+  // map.on("click", "restroom", createPopup);
+  // map.on("click", "parking", createPopup);
 
-  map.on("click", (e) => {
-    const features = map.queryRenderedFeatures(e.point);
-    const displayFeatures = features.map((feature) => {
-      const layer = feature.layer;
-      const displayFeat = {
-        id: layer.id,
-        source: layer.source,
-        sourceLayer: layer["source-layer"],
-        properties: feature.properties,
-      };
-      return displayFeat;
-    });
-    console.log(JSON.stringify(displayFeatures, null, 2));
-  });
+  // map.on("click", (e) => {
+  //   const features = map.queryRenderedFeatures(e.point);
+  //   const displayFeatures = features.map((feature) => {
+  //     const layer = feature.layer;
+  //     const displayFeat = {
+  //       id: layer.id,
+  //       source: layer.source,
+  //       sourceLayer: layer["source-layer"],
+  //       properties: feature.properties,
+  //     };
+  //     return displayFeat;
+  //   });
+  //   console.log(JSON.stringify(displayFeatures, null, 2));
+  // });
 });

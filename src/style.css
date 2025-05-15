@@ -41,7 +41,7 @@
 }
 
 .ahp-popup {
-  background-image: url(./images/Popup_Background.svg);
+  background-image: url(./images/Popup-Background.svg);
   background-repeat: no-repeat;
   width: 233px;
   height: 120px;
@@ -66,7 +66,7 @@
 
 .ahp-popup .maplibregl-popup-close-button {
   background-color: transparent;
-  background-image: url(./images/Close_Button.svg);
+  background-image: url(./images/Close-Button.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
