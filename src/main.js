@@ -33,6 +33,7 @@ function boundsForFeature(kind) {
 
 const festivalBounds = boundsForFeature("festival-initial-bounds");
 const paradeBounds = boundsForFeature("parade-initial-bounds");
+const carShowInitalBounds = boundsForFeature("car-show-initial-bounds")
 const mapInitalBounds = boundsForFeature("map-initial-bounds");
 const maxBounds = boundsForFeature("map-max-bounds");
 const urlParams = new URLSearchParams(window.location.search);
@@ -45,13 +46,16 @@ if (area === "festival") {
 if (area === "parade") {
   bounds = paradeBounds;
 }
+if (area === "car-show") {
+  bounds = carShowInitalBounds;
+}
 
 const map = new Map({
   container: "map",
   style: mapStyle,
   bounds: bounds,
   maxBounds: maxBounds,
-  minZoom: 13,
+  minZoom: 12,
   maxZoom: 20,
   attributionControl: false,
 });
