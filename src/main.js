@@ -5,6 +5,7 @@ import {
   NavigationControl,
   FullscreenControl,
   GeolocateControl,
+  ScaleControl
   // Popup,
 } from "maplibre-gl";
 import { Protocol } from "pmtiles";
@@ -38,6 +39,7 @@ const mapInitalBounds = boundsForFeature("map-initial-bounds");
 const maxBounds = boundsForFeature("map-max-bounds");
 const urlParams = new URLSearchParams(window.location.search);
 const area = urlParams.get("area");
+const blank = urlParams.get("blank");
 
 let bounds = mapInitalBounds;
 if (area === "festival") {
@@ -50,9 +52,20 @@ if (area === "car-show") {
   bounds = carShowInitalBounds;
 }
 
+function createBlankStyle(style) {
+  const blankStyle = JSON.parse(JSON.stringify(style));
+  blankStyle.layers = blankStyle.layers.reduce((acc, layer) => {
+    if (layer.source !== "features") {
+      acc.push(layer);
+    }
+    return acc;
+  }, []);
+  return blankStyle;
+}
+
 const map = new Map({
   container: "map",
-  style: mapStyle,
+  style: blank === null ? mapStyle : createBlankStyle(mapStyle),
   bounds: bounds,
   maxBounds: maxBounds,
   minZoom: 12,
@@ -60,25 +73,35 @@ const map = new Map({
   attributionControl: false,
 });
 
-map.scrollZoom.disable();
+if (blank) {
 
-map.addControl(
-  new NavigationControl({
-    showCompass: false,
-  }),
-  "top-left"
-);
+  document.getElementById("attribution").style.opacity = "0";
+  let scale = new ScaleControl({
+    maxWidth: 80,
+    unit: 'imperial'
+  });
+  map.addControl(scale);
+} else {
+  map.scrollZoom.enable();
 
-map.addControl(new FullscreenControl(), "bottom-left");
-map.addControl(
-  new GeolocateControl({
-    positionOptions: {
-      enableHighAccuracy: true,
-    },
-    trackUserLocation: true,
-  }),
-  "top-left"
-);
+  map.addControl(
+    new NavigationControl({
+      showCompass: false,
+    }),
+    "top-left"
+  );
+
+  map.addControl(new FullscreenControl(), "bottom-left");
+  map.addControl(
+    new GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true,
+      },
+      trackUserLocation: true,
+    }),
+    "top-left"
+  );
+}
 
 // window.__AHP_DEBUG__ = {};
 // window.__AHP_DEBUG__.map = map;
